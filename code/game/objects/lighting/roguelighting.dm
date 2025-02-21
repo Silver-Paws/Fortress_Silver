@@ -756,6 +756,8 @@
 				I.pixel_x = 0
 				I.pixel_y = 0
 				add_overlay(new /mutable_appearance(I))
+			if(I.reagents.chem_temp >= 370) // Проверка для того чтобы стейт котелка на очаге обновился 
+				I.update_icon()
 
 /obj/machinery/light/rogue/hearth/attack_hand(mob/user)
 	. = ..()

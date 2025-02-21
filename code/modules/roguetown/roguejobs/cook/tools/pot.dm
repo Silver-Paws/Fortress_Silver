@@ -33,6 +33,11 @@
 			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
 			add_overlay(filling)
 
+	if(reagents.chem_temp >= 370) // Оверлей стейт кипения воды
+		var/mutable_appearance/boil = mutable_appearance('modular_twilight/modular/NeuFood/icons/cooking.dmi', "pote_boil")
+		boil.color = mix_color_from_reagents(reagents.reagent_list)
+		boil.alpha = mix_alpha_from_reagents(reagents.reagent_list)
+		add_overlay(boil)
 
 /obj/item/reagent_containers/glass/bucket/pot/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/reagent_containers/glass/bowl))
