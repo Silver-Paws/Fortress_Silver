@@ -1,90 +1,91 @@
 /datum/mob_descriptor/body
 	abstract_type = /datum/mob_descriptor/body
 	slot = MOB_DESCRIPTOR_SLOT_BODY
+	suffix = "тело"
 
 /datum/mob_descriptor/body/average
-	name = "Average"
+	name = "Заурядное"
 
 /datum/mob_descriptor/body/athletic
-	name = "Athletic"
+	name = "Атлетичное"
 
 /datum/mob_descriptor/body/muscular
-	name = "Muscular"
+	name = "Мускулистое"
 
 /datum/mob_descriptor/body/herculean
-	name = "Herculean"
+	name = "Богатырское"
 
 /datum/mob_descriptor/body/plump
-	name = "Plump"
+	name = "Полное"
 
 /datum/mob_descriptor/body/pearshaped
-	name = "Pear-shaped"
+	name = "Грушевидное"
 
 /datum/mob_descriptor/body/pudgy
-	name = "Pudgy"
+	name = "Пухлое"
 
 /datum/mob_descriptor/body/strongfat
-	name = "Strong-fat"
+	name = "Упитанно-мускулистое"
 
 /datum/mob_descriptor/body/round
-	name = "Round"
+	name = "Округлое"
 
 /datum/mob_descriptor/body/heavy
-	name = "Heavy"
+	name = "Тяжёлое"
 
 /datum/mob_descriptor/body/topheavy
-	name = "Top Heavy"
+	name = "Неустойчивое"
 
 /datum/mob_descriptor/body/bottomheavy
-	name = "Bottom Heavy"
+	name = "Упитанное снизу"
 
 /datum/mob_descriptor/body/curvy
-	name = "Curvy"
+	name = "Пышное"
 
 /datum/mob_descriptor/body/voluptuous
-	name = "Voluptuous"
+	name = "Вызывающее"
 
 /datum/mob_descriptor/body/decrepit
-	name = "Decrepit"
+	name = "Дряхлое"
 
 /datum/mob_descriptor/body/thin
-	name = "Thin"
+	name = "Тонкое"
 
 /datum/mob_descriptor/body/bulky
-	name = "Bulky"
+	name = "Неуклюжее"
 
 /datum/mob_descriptor/body/slender
-	name = "Slender"
+	name = "Худощавое"
 
 /datum/mob_descriptor/body/lissome
-	name = "Lissome"
+	name = "Проворное"
 
 /datum/mob_descriptor/body/lanky
-	name = "Lanky"
+	name = "Долговязое"
 
 /datum/mob_descriptor/body/twiggy
-	name = "Twiggy"
+	name = "Ветвистое"
 
 /datum/mob_descriptor/body/dainty
-	name = "Dainty"
+	name = "Элегантное"
 
 /datum/mob_descriptor/body/petite
-	name = "Petite"
+	name = "Компактное"
 
 /datum/mob_descriptor/body/gaunt
-	name = "Gaunt"
+	name = "Сухопарое"
 
 /datum/mob_descriptor/body/lean
-	name = "Lean"
+	name = "Постное"
 
 /datum/mob_descriptor/body/skeletal
-	name = "Skeletal"
+	name = "Скелетообразное"
 
 /datum/mob_descriptor/body/broadshoulder
-	name = "Broad-shouldered"
+	name = "Широкоплечее"
 
 /datum/mob_descriptor/body/waspwaist
-	name = "Wasp-waisted"
+	name = "Осиное в талии"
 
 /datum/mob_descriptor/body/burly
-	name = "Burly"
+	name = "Крепкое"

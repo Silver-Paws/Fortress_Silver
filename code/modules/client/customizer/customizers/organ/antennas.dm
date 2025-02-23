@@ -1,10 +1,10 @@
 /datum/customizer/organ/antennas
 	abstract_type = /datum/customizer/organ/antennas
-	name = "Antennas"
+	name = "Антенны"
 
 /datum/customizer_choice/organ/antennas
 	abstract_type = /datum/customizer_choice/organ/antennas
-	name = "Antennas"
+	name = "Антенны"
 	organ_type = /obj/item/organ/antennas
 	organ_slot = ORGAN_SLOT_ANTENNAS
 
@@ -12,7 +12,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/antennas/moth)
 
 /datum/customizer_choice/organ/antennas/moth
-	name = "Fluvian Antennas"
+	name = "Флювианские антенны"
 	organ_type = /obj/item/organ/antennas/moth
 	sprite_accessories = list(
 		/datum/sprite_accessory/antenna/moth/plain,

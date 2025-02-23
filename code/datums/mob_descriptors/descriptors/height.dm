@@ -3,21 +3,16 @@
 	slot = MOB_DESCRIPTOR_SLOT_HEIGHT
 
 /datum/mob_descriptor/height/moderate
-	name = "Moderate"
-	prefix = "a"
+	name = "среднего роста"
 
 /datum/mob_descriptor/height/tall
-	name = "Tall"
-	prefix = "a"
+	name = "высокого роста"
 
 /datum/mob_descriptor/height/short
-	name = "Short"
-	prefix = "a"
+	name = "низкого роста"
 
 /datum/mob_descriptor/height/towering
-	name = "Towering"
-	prefix = "a"
+	name = "возвышающегося роста"
 
 /datum/mob_descriptor/height/tiny
-	name = "Tiny"
-	prefix = "a"
+	name = "крохотного роста"

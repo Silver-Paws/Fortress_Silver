@@ -1,10 +1,10 @@
 /datum/customizer/organ/neck_feature
 	abstract_type = /datum/customizer/organ/neck_feature
-	name = "Neck"
+	name = "Шея"
 
 /datum/customizer_choice/organ/neck_feature
 	abstract_type = /datum/customizer_choice/organ/neck_feature
-	name = "Neck"
+	name = "Шея"
 	organ_type = /obj/item/organ/neck_feature
 	organ_slot = ORGAN_SLOT_NECK_FEATURE
 
@@ -12,7 +12,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/neck_feature/moth_fluff)
 
 /datum/customizer_choice/organ/neck_feature/moth_fluff
-	name = "Fluvian Fluff"
+	name = "Пух флювиан"
 	organ_type = /obj/item/organ/neck_feature/moth_fluff
 	sprite_accessories = list(
 		/datum/sprite_accessory/neck_feature/moth_fluff/plain,
@@ -37,7 +37,7 @@
 		)
 
 /datum/customizer/organ/neck_feature/anthro
-	name = "Wild-Kin Fluff"
+	name = "Пух вайлд-кинов"
 	allows_disabling = TRUE
 	default_disabled = TRUE
 	customizer_choices = list(
@@ -45,7 +45,7 @@
 		)
 
 /datum/customizer_choice/organ/neck_feature/anthro_fluff
-	name = "Wild-Kin Fluff"
+	name = "Пух вайлд-кинов"
 	organ_type = /obj/item/organ/neck_feature/anthro_fluff
 	sprite_accessories = list(
 		/datum/sprite_accessory/neck_feature/mammal_fluff/fluff,

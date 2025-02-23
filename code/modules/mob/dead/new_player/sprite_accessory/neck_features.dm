@@ -7,7 +7,7 @@
 
 /datum/sprite_accessory/neck_feature/moth_fluff
 	abstract_type = /datum/sprite_accessory/neck_feature/moth_fluff
-	color_key_name = "Fluff"
+	color_key_name = "Цвет пуха"
 	icon = 'icons/mob/sprite_accessory/neck_features/moth_fluff.dmi'
 	default_colors = list("#FFFFFF")
 
@@ -89,7 +89,7 @@
 
 /datum/sprite_accessory/neck_feature/mammal_fluff
 	abstract_type = /datum/sprite_accessory/neck_feature/mammal_fluff
-	color_key_name = "Fluff"
+	color_key_name = "Цвет пуха"
 	icon = 'icons/mob/sprite_accessory/neck_features/mammal_fluff.dmi'
 
 /datum/sprite_accessory/neck_feature/mammal_fluff/fluff

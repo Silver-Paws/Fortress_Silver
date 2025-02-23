@@ -1,11 +1,11 @@
 /datum/customizer/bodypart_feature/face_detail
-	name = "Face Detail"
+	name = "Черты лица"
 	customizer_choices = list(/datum/customizer_choice/bodypart_feature/face_detail)
 	allows_disabling = TRUE
 	default_disabled = TRUE
 
 /datum/customizer_choice/bodypart_feature/face_detail
-	name = "Face Detail"
+	name = "Черты лица"
 	feature_type = /datum/bodypart_feature/face_detail
 	allows_accessory_color_customization = FALSE
 	sprite_accessories = list(
@@ -20,13 +20,13 @@
 		)
 
 /datum/customizer/bodypart_feature/accessory
-	name = "Accessory"
+	name = "Аксессуар"
 	customizer_choices = list(/datum/customizer_choice/bodypart_feature/accessory)
 	allows_disabling = TRUE
 	default_disabled = TRUE
 
 /datum/customizer_choice/bodypart_feature/accessory
-	name = "Accessory"
+	name = "Аксессуар"
 	feature_type = /datum/bodypart_feature/accessory
 	allows_accessory_color_customization = FALSE
 	sprite_accessories = list(

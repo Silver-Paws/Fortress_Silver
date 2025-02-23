@@ -1,92 +1,90 @@
 /datum/mob_descriptor/voice
 	abstract_type = /datum/mob_descriptor/voice
 	slot = MOB_DESCRIPTOR_SLOT_VOICE
-	verbage = "speaks with"
-	prefix = "a"
-	suffix = "voice"
+	verbage = "%HIS% голос"
+	suffix = "на слух"
 
 /datum/mob_descriptor/voice/ordinary
-	name = "Ordinary"
-	prefix = "an"
+	name = "Обыкновенный"
 
 /datum/mob_descriptor/voice/monotone
-	name = "Monotone"
+	name = "Монотонный"
 
 /datum/mob_descriptor/voice/deep
-	name = "Deep"
+	name = "Глубокий"
 
 /datum/mob_descriptor/voice/soft
-	name = "Soft"
+	name = "Мягкий"
 
 /datum/mob_descriptor/voice/shrill
-	name = "Shrill"
+	name = "Пронзительный"
 
 /datum/mob_descriptor/voice/sleepy
-	name = "Sleepy"
+	name = "Заспанный"
 
 /datum/mob_descriptor/voice/commanding
-	name = "Commanding"
+	name = "Повелительный"
 
 /datum/mob_descriptor/voice/kind
-	name = "Kind"
+	name = "Добрый"
 
 /datum/mob_descriptor/voice/growly
-	name = "Growly"
+	name = "Рычащий"
 
 /datum/mob_descriptor/voice/androgynous
-	name = "Androgynous"
-	prefix = "an"
+	name = "Женоподобный"
 
 /datum/mob_descriptor/voice/nasal
-	name = "Nasal"
+	name = "Гнусавый"
 
 /datum/mob_descriptor/voice/refined
-	name = "Refined"
+	name = "Чётко поставленный"
 
 /datum/mob_descriptor/voice/cheery
-	name = "Cheery"
+	name = "Бойкий"
 
 /datum/mob_descriptor/voice/dispassionate
-	name = "Dispassionate"
+	name = "Беспристрастный"
 
 /datum/mob_descriptor/voice/gravelly
-	name = "Gravelly"
+	name = "Хриплый"
 
 /datum/mob_descriptor/voice/whiny
-	name = "Whiny"
+	name = "Плаксивый"
 
 /datum/mob_descriptor/voice/melodic
-	name = "Melodic"
+	name = "Мелодичный"
 
 /datum/mob_descriptor/voice/drawling
-	name = "Drawling"
+	name = "Протяжный"
+	suffix = "при выговаривании слов"
 
 /datum/mob_descriptor/voice/stilted
-	name = "Stilted"
+	name = "Напыщенный"
 
 /datum/mob_descriptor/voice/grave
-	name = "Grave"
+	name = "Замогильный"
 
 /datum/mob_descriptor/voice/doting
-	name = "Doting"
+	name = "Преданный"
 
 /datum/mob_descriptor/voice/booming
-	name = "Booming"
+	name = "Громкий"
 
 /datum/mob_descriptor/voice/lisping
-	name = "Lisping"
+	name = "Шепелявый"
 
 /datum/mob_descriptor/voice/honeyed
-	name = "Honeyed"
+	name = "Сладкий"
 
 /datum/mob_descriptor/voice/facetious
-	name = "Facetious"
+	name = "Шутливый"
 
 /datum/mob_descriptor/voice/snide
-	name = "Snide"
+	name = "Ехидный"
 
 /datum/mob_descriptor/voice/smoker
-	name = "Smoker's"
+	name = "Прокуренный"
 
 /datum/mob_descriptor/voice/venomous
-	name = "Venomous"
+	name = "Злобный"

@@ -1,9 +1,9 @@
 /datum/customizer/organ/ears
-	name = "Ears"
+	name = "Уши"
 	abstract_type = /datum/customizer/organ/ears
 
 /datum/customizer_choice/organ/ears
-	name = "Ears"
+	name = "Уши"
 	organ_type = /obj/item/organ/ears
 	organ_slot = ORGAN_SLOT_EARS
 	abstract_type = /datum/customizer_choice/organ/ears
@@ -12,7 +12,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/ears/vulpkanin)
 
 /datum/customizer_choice/organ/ears/vulpkanin
-	name = "Vulpkian Ears"
+	name = "Вульпкианские уши"
 	organ_type = /obj/item/organ/ears/vulpkanin
 	sprite_accessories = list(
 		/datum/sprite_accessory/ears/fox,
@@ -24,7 +24,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/ears/lupian)
 
 /datum/customizer_choice/organ/ears/lupian
-	name = "Lupian Ears"
+	name = "Люпианские уши"
 	organ_type = /obj/item/organ/ears/lupian
 	sprite_accessories = list(
 		/datum/sprite_accessory/ears/bigwolf,
@@ -40,7 +40,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/ears/tabaxi)
 
 /datum/customizer_choice/organ/ears/tabaxi
-	name = "Tabaxi Ears"
+	name = "Уши табакси"
 	organ_type = /obj/item/organ/ears/tabaxi
 	sprite_accessories = list(
 		/datum/sprite_accessory/ears/cat,
@@ -53,7 +53,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/ears/axian)
 
 /datum/customizer_choice/organ/ears/axian
-	name = "Axian Ears"
+	name = "Уши аксиан"
 	organ_type = /obj/item/organ/ears/akula
 	sprite_accessories = list(
 		/datum/sprite_accessory/ears/shark,
@@ -64,7 +64,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/ears/cat)
 
 /datum/customizer_choice/organ/ears/cat
-	name = "Cat Ears"
+	name = "Кошачьи уши"
 	organ_type = /obj/item/organ/ears/cat
 	sprite_accessories = list(/datum/sprite_accessory/ears/cat)
 
@@ -73,7 +73,7 @@
 	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/ears/demihuman
-	name = "Half-Kinhuman Ears"
+	name = "Халф-кинские уши"
 	organ_type = /obj/item/organ/ears
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -129,7 +129,7 @@
 	default_disabled = TRUE
 
 /datum/customizer_choice/organ/ears/anthro
-	name = "Wild-Kin Ears"
+	name = "Вайлд-кинские уши"
 	organ_type = /obj/item/organ/ears/anthro
 	generic_random_pick = TRUE
 	sprite_accessories = list(

@@ -1,5 +1,5 @@
 /obj/item/organ/penis
-	name = "penis"
+	name = "член"
 	icon_state = "penis" 
 	visible_organ = TRUE
 	zone = BODY_ZONE_PRECISE_GROIN
@@ -31,7 +31,7 @@
 		owner.update_body_parts(TRUE)
 
 /obj/item/organ/penis/knotted
-	name = "knotted penis"
+	name = "узловатый член"
 	penis_type = PENIS_TYPE_KNOTTED
 	sheath_type = SHEATH_TYPE_NORMAL
 	icon_state = "knotpenis" 
@@ -40,55 +40,55 @@
 	penis_size = 3
 
 /obj/item/organ/penis/equine
-	name = "equine penis"
+	name = "лошадиный член"
 	penis_type = PENIS_TYPE_EQUINE
 	sheath_type = SHEATH_TYPE_NORMAL
 	icon_state = "equinepenis"
 
 /obj/item/organ/penis/tapered_mammal
-	name = "tapered penis"
+	name = "сужающийся член"
 	penis_type = PENIS_TYPE_TAPERED
 	sheath_type = SHEATH_TYPE_NORMAL
 	icon_state = "taperedpenis"
 
 /obj/item/organ/penis/tapered
-	name = "tapered penis"
+	name = "сужающийся член"
 	penis_type = PENIS_TYPE_TAPERED
 	sheath_type = SHEATH_TYPE_SLIT
 	icon_state = "taperedpenis"
 
 /obj/item/organ/penis/tapered_double
-	name = "hemi tapered penis"
+	name = "двойной сужающийся член"
 	penis_type = PENIS_TYPE_TAPERED_DOUBLE
 	sheath_type = SHEATH_TYPE_SLIT
 	icon_state = "hemipenis"
 
 /obj/item/organ/penis/tapered_double_knotted
-	name = "hemi knotted tapered penis"
+	name = "двойной узловатый сужающийся член"
 	penis_type = PENIS_TYPE_TAPERED_DOUBLE_KNOTTED
 	sheath_type = SHEATH_TYPE_SLIT
 	icon_state = "hemiknotpenis"
 
 /obj/item/organ/penis/barbed
-	name = "barbed penis"
+	name = "шипованный пенис"
 	penis_type = PENIS_TYPE_BARBED
 	sheath_type = SHEATH_TYPE_NORMAL
 	icon_state = "barbpenis"
 
 /obj/item/organ/penis/barbed_knotted
-	name = "barbed knotted penis"
+	name = "шипованный узловатый член"
 	penis_type = PENIS_TYPE_BARBED_KNOTTED
 	sheath_type = SHEATH_TYPE_NORMAL
 	icon_state = "barbpenis"
 
 /obj/item/organ/penis/tentacle
-	name = "tentacle penis"
+	name = "член-щупальце"
 	penis_type = PENIS_TYPE_TENTACLE
 	sheath_type = SHEATH_TYPE_NONE
 	icon_state = "tentapenis"
 
 /obj/item/organ/vagina
-	name = "vagina"
+	name = "вагина"
 	icon_state = "womb"
 	visible_organ = TRUE
 	zone = BODY_ZONE_PRECISE_GROIN
@@ -104,13 +104,13 @@
 	if(owner.stat == DEAD)
 		return
 	if(isseelie(owner))
-		to_chat(owner, span_lovebold("Despite the surge of warmth filling me, I can't get pregnant."))
+		to_chat(owner, span_lovebold("Волна тепла наполняет меня, но, несмотря на это, я не могу забеременеть."))
 		return
-	to_chat(owner, span_lovebold("I feel a surge of warmth in my belly, I’m definitely pregnant!"))
+	to_chat(owner, span_lovebold("У моего живота накатывает волна тепла, я точно беременна!"))
 	pregnant = TRUE
 
 /obj/item/organ/breasts
-	name = "breasts"
+	name = "груди"
 	icon_state = "breasts"
 	visible_organ = TRUE
 	zone = BODY_ZONE_CHEST
@@ -123,7 +123,7 @@
 	var/milk_max = 30
 
 /obj/item/organ/testicles
-	name = "testicles"
+	name = "мошонка"
 	icon_state = "testicles"
 	visible_organ = TRUE
 	zone = BODY_ZONE_PRECISE_GROIN
@@ -133,6 +133,6 @@
 	var/ball_size = DEFAULT_TESTICLES_SIZE
 
 /obj/item/organ/testicles/internal
-	name = "internal testicles"
+	name = "внутренние яички"
 	visible_organ = FALSE
 	accessory_type = /datum/sprite_accessory/none

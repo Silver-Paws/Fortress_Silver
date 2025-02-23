@@ -1,10 +1,10 @@
 /datum/customizer/organ/wings
 	abstract_type = /datum/customizer/organ/wings
-	name = "Wings"
+	name = "Крылья"
 
 /datum/customizer_choice/organ/wings
 	abstract_type = /datum/customizer_choice/organ/wings
-	name = "Wings"
+	name = "Крылья"
 	organ_type = /obj/item/organ/wings
 	organ_slot = ORGAN_SLOT_WINGS
 
@@ -14,7 +14,7 @@
 	default_disabled = TRUE
 
 /datum/customizer_choice/organ/wings/aasimar
-	name = "Angel Wings"
+	name = "Ангельские крылья"
 	organ_type = /obj/item/organ/wings/angel
 	sprite_accessories = list(
 		/datum/sprite_accessory/wings/feathery,
@@ -29,7 +29,7 @@
 	default_disabled = TRUE
 
 /datum/customizer_choice/organ/wings/anthro
-	name = "Wings"
+	name = "Крылья"
 	organ_type = /obj/item/organ/wings/anthro
 	sprite_accessories = list(
 		/datum/sprite_accessory/wings/bat,
@@ -56,7 +56,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/wings/moth)
 
 /datum/customizer_choice/organ/wings/moth
-	name = "Fluvian Wings"
+	name = "Крылья флювиан"
 	organ_type = /obj/item/organ/wings/moth
 	sprite_accessories = list(
 		/datum/sprite_accessory/wings/huge/megamoth,
@@ -92,7 +92,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/wings/seelie)
 
 /datum/customizer_choice/organ/wings/seelie
-	name = "Seelie Wings"
+	name = "Крылья феи"
 	organ_type = /obj/item/organ/wings/seelie
 	sprite_accessories = list(
 		/datum/sprite_accessory/wings/seelie,

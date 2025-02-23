@@ -430,7 +430,7 @@
 	skill_level = 4
 
 /datum/artificer_recipe/guns/blunderbuss
-	name = "Бландербасс (+1 Приклад) (+1 Замок) (+1 Ствол)" //КАКОЙ БАНДУК???
+	name = "Мушкетон (+1 Приклад) (+1 Замок) (+1 Ствол)" //КАКОЙ БАНДУК??? UPD: КАКОЙ БЛАНДЕРБАСС???
 	required_item = /obj/item/ingot/steel
 	additional_items = list(/obj/item/gunlock = 1,
 							/obj/item/gunstock = 1,

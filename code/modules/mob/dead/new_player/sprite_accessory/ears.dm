@@ -1,7 +1,7 @@
 /datum/sprite_accessory/ears
 	abstract_type = /datum/sprite_accessory/ears
 	icon = 'icons/mob/sprite_accessory/ears/ears.dmi'
-	color_key_name = "Ears"
+	color_key_name = "Цвет ушей"
 	relevant_layers = list(BODY_ADJ_LAYER, BODY_FRONT_LAYER)
 
 /datum/sprite_accessory/ears/is_visible(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)

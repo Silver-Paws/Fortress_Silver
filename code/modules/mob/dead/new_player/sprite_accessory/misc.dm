@@ -10,44 +10,44 @@
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_FACE, OFFSET_FACE_F)
 
 /datum/sprite_accessory/face_detail/brows
-	name = "Thick Eyebrows"
+	name = "Толстые брови"
 	icon_state = "brows"
 	layer = BODY_LAYER
 	default_colors =  null
 	color_key_defaults = list(KEY_HAIR_COLOR)
 
 /datum/sprite_accessory/face_detail/brows/dark
-	name = "Dark Eyebrows"
+	name = "Тёмные брови"
 	icon_state = "darkbrows"
 	layer = BODY_LAYER
 
 /datum/sprite_accessory/face_detail/scar
-	name = "Scar"
+	name = "Шрам"
 	icon_state = "scar"
 	layer = BODY_LAYER
 
 /datum/sprite_accessory/face_detail/scart
-	name = "Scar2"
+	name = "Шрам 2"
 	layer = BODY_LAYER
 	icon_state = "scar2"
 
 /datum/sprite_accessory/face_detail/burnface_r
-	name = "Burns (r)"
+	name = "Ожог (Прав.)"
 	icon_state = "burnface_r"
 	layer = BODY_LAYER
 
 /datum/sprite_accessory/face_detail/burnface_l
-	name = "Burns (l)"
+	name = "Ожог (Лев.)"
 	icon_state = "burnface_l"
 	layer = BODY_LAYER
 
 /datum/sprite_accessory/face_detail/deadeye_r
-	name = "Dead Eye (r)"
+	name = "Слепой глаз (Прав.)"
 	icon_state = "deadeye_r"
 	layer = BODY_LAYER
 
 /datum/sprite_accessory/face_detail/deadeye_l
-	name = "Dead Eye (l)"
+	name = "Слепой глаз (Лев.)"
 	icon_state = "deadeye_l"
 	layer = BODY_LAYER
 
@@ -62,36 +62,36 @@
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_FACE, OFFSET_FACE_F)
 
 /datum/sprite_accessory/accessory/earrings
-	name = "Earrings (G)"
+	name = "Серьги (Зол.)"
 	icon_state = "earrings"
 	layer = BODY_FRONT_LAYER
 
 /datum/sprite_accessory/accessory/earrings/sil
-	name = "Earrings"
+	name = "Серьги"
 	icon_state = "earrings_sil"
 	layer = BODY_FRONT_LAYER
 
 /datum/sprite_accessory/accessory/earrings/em
-	name = "Earrings (E)"
+	name = "Серьги (E)"
 	icon_state = "earrings_em"
 	layer = BODY_FRONT_LAYER
 
 /datum/sprite_accessory/accessory/eyepierce
-	name = "Pierced Brow (L)"
+	name = "Пирсинг брови (Лев.)"
 	icon_state = "eyepierce"
 	layer = BODY_FRONT_LAYER
 
 /datum/sprite_accessory/accessory/eyepierce/alt
-	name = "Pierced Brow (R)"
+	name = "Пирсинг брови (Прав.)"
 	icon_state = "eyepiercealt"
 	layer = BODY_LAYER
 
 /datum/sprite_accessory/accessory/choker
-	name = "Neckband"
+	name = "Шейный ободок"
 	icon_state = "choker"
 	layer = BODY_LAYER
 
 /datum/sprite_accessory/accessory/chokere
-	name = "Neckband (E)"
+	name = "Шейный ободок (E)"
 	icon_state = "chokere"
 	layer = BODY_LAYER

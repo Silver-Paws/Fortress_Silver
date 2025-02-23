@@ -1,10 +1,10 @@
 /datum/customizer/organ/tail
-	name = "Tail"
+	name = "Хвост"
 	abstract_type = /datum/customizer/organ/tail
 	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/tail
-	name = "Tail"
+	name = "Хвост"
 	organ_type = /obj/item/organ/tail
 	organ_slot = ORGAN_SLOT_TAIL
 	abstract_type = /datum/customizer_choice/organ/tail
@@ -13,7 +13,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/vulpkanin)
 
 /datum/customizer_choice/organ/tail/vulpkanin
-	name = "Vulpkian Tail"
+	name = "Хвост вульпкиан"
 	organ_type = /obj/item/organ/tail/vulpkanin
 	sprite_accessories = list(/datum/sprite_accessory/tail/fox)
 
@@ -21,7 +21,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/lupian)
 
 /datum/customizer_choice/organ/tail/lupian
-	name = "Lupian Tail"
+	name = "Хвост люпиан"
 	organ_type = /obj/item/organ/tail/lupian
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/otie,
@@ -36,7 +36,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/tabaxi)
 
 /datum/customizer_choice/organ/tail/tabaxi
-	name = "Tabaxi Tail"
+	name = "Хвост табакси"
 	organ_type = /obj/item/organ/tail/cat
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/catbig,
@@ -51,7 +51,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/lizard)
 
 /datum/customizer_choice/organ/tail/lizard
-	name = "Sissean Tail"
+	name = "Хвост сиссеан"
 	organ_type = /obj/item/organ/tail/lizard
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -65,7 +65,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/kobold)
 
 /datum/customizer_choice/organ/tail/kobold
-	name = "Kobold Tail"
+	name = "Хвост кобольдов"
 	organ_type = /obj/item/organ/tail/kobold
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -76,7 +76,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/axian)
 
 /datum/customizer_choice/organ/tail/axian
-	name = "Axian Tail"
+	name = "Хвост аксиан"
 	organ_type = /obj/item/organ/tail/akula
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/data_shark,
@@ -90,7 +90,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/tiefling)
 
 /datum/customizer_choice/organ/tail/tiefling
-	name = "Tiefling Tail"
+	name = "Хвост тифлингов"
 	organ_type = /obj/item/organ/tail/tiefling
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -103,7 +103,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/demihuman)
 
 /datum/customizer_choice/organ/tail/demihuman
-	name = "Half-Kinhuman Tail"
+	name = "Хвост халф-кинов"
 	organ_type = /obj/item/organ/tail
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -169,7 +169,7 @@
 	default_disabled = TRUE
 
 /datum/customizer_choice/organ/tail/anthro
-	name = "Wild-Kin Tail"
+	name = "Хвост вайлд-кинов"
 	organ_type = /obj/item/organ/tail/anthro
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/akulashark,
@@ -234,7 +234,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/tail/dragongirl)
 
 /datum/customizer_choice/organ/tail/dragongirl
-	name = "Dragon Tail"
+	name = "Драконий хвост"
 	organ_type = /obj/item/organ/tail/dragontail
 	generic_random_pick = TRUE
 	sprite_accessories = list(

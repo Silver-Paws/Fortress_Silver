@@ -70,27 +70,27 @@
 	var/list/lines = list()
 	var/list/desc_copy = descriptors.Copy()
 
-	var/first_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_HEIGHT, MOB_DESCRIPTOR_SLOT_BODY, MOB_DESCRIPTOR_SLOT_STATURE, MOB_DESCRIPTOR_SLOT_FACE_SHAPE, MOB_DESCRIPTOR_SLOT_FACE_EXPRESSION), "You see %DESC1%, %DESC2% %DESC3% with %DESC4%, %DESC5%")
+	var/first_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_HEIGHT, MOB_DESCRIPTOR_SLOT_BODY, MOB_DESCRIPTOR_SLOT_STATURE, MOB_DESCRIPTOR_SLOT_FACE_SHAPE, MOB_DESCRIPTOR_SLOT_FACE_EXPRESSION), "Перед вами %DESC1% %DESC3%, у %HIM% %DESC2% и %DESC4%, %DESC5%.")
 	if(first_line)
 		lines += first_line
 
-	var/second_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_AGE, MOB_DESCRIPTOR_SLOT_SKIN, MOB_DESCRIPTOR_SLOT_VOICE), "%THEY% %DESC1%, %DESC2% and %DESC3%")
+	var/second_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_AGE, MOB_DESCRIPTOR_SLOT_SKIN, MOB_DESCRIPTOR_SLOT_VOICE), "%THEY% %DESC1%, %DESC2%, %DESC3%.")
 	if(second_line)
 		lines += second_line
 
-	var/third_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PROMINENT, MOB_DESCRIPTOR_SLOT_PROMINENT), "%THEY% %DESC1% and %DESC2%")
+	var/third_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PROMINENT, MOB_DESCRIPTOR_SLOT_PROMINENT), "%THEY% %DESC1% и %DESC2%.")
 	if(third_line)
 		lines += third_line
 
-	var/fourth_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PROMINENT, MOB_DESCRIPTOR_SLOT_PROMINENT), "%THEY% %DESC1% and %DESC2%")
+	var/fourth_line = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PROMINENT, MOB_DESCRIPTOR_SLOT_PROMINENT), "%THEY% %DESC1% и %DESC2%.")
 	if(fourth_line)
 		lines += fourth_line
 
-	var/fifth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PENIS, MOB_DESCRIPTOR_SLOT_TESTICLES), "%THEY% %DESC1% and %DESC2%")
+	var/fifth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PENIS, MOB_DESCRIPTOR_SLOT_TESTICLES), "У %HIM% %DESC1% и %DESC2%.")
 	if(fifth)
 		lines += fifth
 
-	var/sixth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_BREASTS, MOB_DESCRIPTOR_SLOT_VAGINA), "%THEY% %DESC1% and %DESC2%")
+	var/sixth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_BREASTS, MOB_DESCRIPTOR_SLOT_VAGINA), "У %HIM% %DESC1% и %DESC2%.")
 	if(sixth)
 		lines += sixth
 
@@ -118,28 +118,28 @@
 	return string
 
 /proc/treat_mob_descriptor_string(string, mob/living/described)
-	var/they_replace
+	var/they_replace = described.rus_they()
 	if(described.gender == MALE)
-		they_replace = "he"
+		they_replace = "он"
 	else
-		they_replace = "she"
+		they_replace = "она"
 	var/man_replace
 	if(described.gender == MALE)
-		man_replace = "man"
+		man_replace = "мужчина"
 	else
-		man_replace = "woman"
-	var/him_replace
+		man_replace = "женщина"
+	var/him_replace = described.rus_forthem()
 	if(described.gender == MALE)
-		him_replace = "him"
+		him_replace = "него"
 	else
-		him_replace = "her"
-	var/his_replace
+		him_replace = "неё"
+	var/his_replace = described.rus_them()
 	if(described.gender == MALE)
-		his_replace = "his"
+		his_replace = "его"
 	else
-		his_replace = "her"
+		his_replace = "её"
 	string = replacetext(string, "%THEY%", they_replace)
-	string = replacetext(string, "%HAVE%", "has")
+	string = replacetext(string, "%HAVE%", "имеет")
 	string = replacetext(string, "%MAN%", man_replace)
 	string = replacetext(string, "%HIM%", him_replace)
 	string = replacetext(string, "%HIS%", his_replace)

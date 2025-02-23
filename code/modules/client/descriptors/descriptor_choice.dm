@@ -5,7 +5,7 @@
 	var/list/descriptors = list()
 
 /datum/descriptor_choice/face
-	name = "Face"
+	name = "Лицо"
 	default_descriptor = /datum/mob_descriptor/face/unremarkable
 	descriptors = list(
 		/datum/mob_descriptor/face/unremarkable,
@@ -29,7 +29,7 @@
 	)
 
 /datum/descriptor_choice/face_exp
-	name = "Resting Expression"
+	name = "Выражение лица"
 	descriptors = list(
 		/datum/mob_descriptor/face_exp/refined,
 		/datum/mob_descriptor/face_exp/disinterested,
@@ -65,7 +65,7 @@
 	)
 
 /datum/descriptor_choice/body
-	name = "Body"
+	name = "Телосложение"
 	default_descriptor = /datum/mob_descriptor/body/average
 	descriptors = list(
 		/datum/mob_descriptor/body/average,
@@ -100,7 +100,7 @@
 	)
 
 /datum/descriptor_choice/stature
-	name = "Stature"
+	name = "Внешнее впечатление"
 	default_descriptor = /datum/mob_descriptor/stature/man
 	descriptors = list(
 		/datum/mob_descriptor/stature/man,
@@ -118,7 +118,7 @@
 	)
 
 /datum/descriptor_choice/voice
-	name = "Voice"
+	name = "Голос"
 	default_descriptor = /datum/mob_descriptor/voice/ordinary
 	descriptors = list(
 		/datum/mob_descriptor/voice/ordinary,
@@ -152,7 +152,7 @@
 	)
 
 /datum/descriptor_choice/skin
-	name = "Skin"
+	name = "Кожа"
 	default_descriptor = /datum/mob_descriptor/skin/normal
 	descriptors = list(
 		/datum/mob_descriptor/skin/normal,
@@ -172,7 +172,7 @@
 	)
 
 /datum/descriptor_choice/scales
-	name = "Scales"
+	name = "Чешуя"
 	default_descriptor = /datum/mob_descriptor/scales/plain
 	descriptors = list(
 		/datum/mob_descriptor/scales/plain,
@@ -183,7 +183,7 @@
 	)
 
 /datum/descriptor_choice/fur
-	name = "Fur"
+	name = "Шерсть"
 	default_descriptor = /datum/mob_descriptor/fur/plain
 	descriptors = list(
 		/datum/mob_descriptor/fur/plain,
@@ -201,7 +201,7 @@
 	)
 
 /datum/descriptor_choice/feathers
-	name = "Feathers"
+	name = "Перья"
 	descriptors = list(
 		/datum/mob_descriptor/feathers/fine,
 		/datum/mob_descriptor/feathers/stiff,
@@ -211,7 +211,7 @@
 	)
 
 /datum/descriptor_choice/chitin
-	name = "Chitin"
+	name = "Хитин"
 	descriptors = list(
 		/datum/mob_descriptor/chitin/smooth,
 		/datum/mob_descriptor/chitin/hard,
@@ -219,18 +219,18 @@
 	)
 
 /datum/descriptor_choice/height
-	name = "Height"
+	name = "Рост"
 	default_descriptor = /datum/mob_descriptor/height/moderate
 	descriptors = list(
 		/datum/mob_descriptor/height/moderate,
+		/datum/mob_descriptor/height/towering,
 		/datum/mob_descriptor/height/tall,
 		/datum/mob_descriptor/height/short,
-		/datum/mob_descriptor/height/towering,
 		/datum/mob_descriptor/height/tiny,
 	)
 
 /datum/descriptor_choice/skin_all
-	name = "Skin/Fur/Scales"
+	name = "Кожа/Мех/Чешуя"
 	default_descriptor = /datum/mob_descriptor/fur/plain
 	descriptors = list(
 		/datum/mob_descriptor/skin/normal,
@@ -340,42 +340,42 @@
 	/datum/mob_descriptor/prominent/vulpine_features
 
 /datum/descriptor_choice/prominent_one
-	name = "Prominent #1"
+	name = "Черта #1"
 	default_descriptor = /datum/mob_descriptor/prominent/unkempt
 	descriptors = list(PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_two
-	name = "Prominent #2"
+	name = "Черта #2"
 	default_descriptor = /datum/mob_descriptor/prominent/dim_look
 	descriptors = list(PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_three
-	name = "Prominent #3"
+	name = "Черта #3"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_four
-	name = "Prominent #4"
+	name = "Черта #4"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_one_wild
-	name = "Prominent #1"
+	name = "Черта #1"
 	default_descriptor = /datum/mob_descriptor/prominent/unkempt
 	descriptors = list(PROMINENT_WILDKIN, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_two_wild
-	name = "Prominent #2"
+	name = "Черта #2"
 	default_descriptor = /datum/mob_descriptor/prominent/dim_look
 	descriptors = list(PROMINENT_WILDKIN, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_three_wild
-	name = "Prominent #3"
+	name = "Черта #3"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_WILDKIN, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_four_wild
-	name = "Prominent #4"
+	name = "Черта #4"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_WILDKIN, PROMINENT_DESCRIPTORS)
 

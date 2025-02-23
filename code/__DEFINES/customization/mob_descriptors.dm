@@ -25,19 +25,19 @@
 #define CUSTOM_PREFIX_AMOUNT 5 //Keep this to match the max
 
 #define CUSTOM_PREFIX_INPUT_LIST list(\
-	"Has a" = CUSTOM_PREFIX_HAS_A,\
-	"Has an" = CUSTOM_PREFIX_HAS_AN,\
-	"Is" = CUSTOM_PREFIX_IS,\
-	"Looks" = CUSTOM_PREFIX_LOOKS,\
-	"Has" = CUSTOM_PREFIX_HAS\
+	"Имеет" = CUSTOM_PREFIX_HAS_A,\
+	"Владеет" = CUSTOM_PREFIX_HAS_AN,\
+	"Является" = CUSTOM_PREFIX_IS,\
+	"Выглядит" = CUSTOM_PREFIX_LOOKS,\
+	"Внешне" = CUSTOM_PREFIX_HAS\
 )
 
 #define CUSTOM_PREFIX_TRANSLATION_LIST list(\
-	"[CUSTOM_PREFIX_HAS_A]" = "Has a",\
-	"[CUSTOM_PREFIX_HAS_AN]" = "Has an",\
-	"[CUSTOM_PREFIX_IS]" = "Is",\
-	"[CUSTOM_PREFIX_LOOKS]" = "Looks",\
-	"[CUSTOM_PREFIX_HAS]" = "Has"\
+	"[CUSTOM_PREFIX_HAS_A]" = "имеет",\
+	"[CUSTOM_PREFIX_HAS_AN]" = "владеет",\
+	"[CUSTOM_PREFIX_IS]" = "является",\
+	"[CUSTOM_PREFIX_LOOKS]" = "выглядит",\
+	"[CUSTOM_PREFIX_HAS]" = "внешне"\
 )
 
 #define MOB_DESCRIPTOR(descriptor_type) GLOB.mob_descriptors[descriptor_type]

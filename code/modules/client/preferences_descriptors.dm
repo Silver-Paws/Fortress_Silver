@@ -56,7 +56,7 @@
 			for(var/desc_type in choice.descriptors)
 				var/datum/mob_descriptor/descriptor = MOB_DESCRIPTOR(desc_type)
 				picklist[descriptor.name] = desc_type
-			var/picked_descriptor_name = input(user, "Describe my [lowertext(choice.name)]", "Describe myself") as null|anything in picklist
+			var/picked_descriptor_name = input(user, "Опиши [lowertext(choice.name)]", "Опиши себя") as null|anything in picklist
 
 			if(!picked_descriptor_name)
 				return
@@ -69,7 +69,7 @@
 			var/index = text2num(href_list["index"])
 			var/datum/custom_descriptor_entry/custom_entry = custom_descriptors[index]
 			var/current_prefix_text = translation["[custom_entry.prefix_type ]"]
-			var/new_prefix_text = input(user, "Choose the prefix", "Describe myself", current_prefix_text) as null|anything in input_list
+			var/new_prefix_text = input(user, "Выбери префикс", "Опиши себя", current_prefix_text) as null|anything in input_list
 			if(!new_prefix_text)
 				return
 			var/new_prefix_type = input_list[new_prefix_text]
@@ -77,7 +77,7 @@
 		if("custom_descriptor_content")
 			var/index = text2num(href_list["index"])
 			var/datum/custom_descriptor_entry/custom_entry = custom_descriptors[index]
-			var/new_content = input(user, "Describe the feature", "Describe myself") as text|null
+			var/new_content = input(user, "Опиши черту", "Опиши себя") as text|null
 			if(!new_content)
 				return
 			new_content = strip_html_simple(lowertext(new_content), CUSTOM_DESCRIPTOR_TEXT_LENGTH)
@@ -107,20 +107,20 @@
 		if(custom_data)
 			dat += custom_data
 
-	dat += "<br><br><center>Descriptors can vary based on gender<br>Some don't appear if you don't match a requirement<center>"
+	dat += "<br><br><center>Черты могут разниться зависимо от пола или расы<br>Некоторые опции не появятся без выполнения условий<center>"
 	return dat
 
 /datum/preferences/proc/print_custom_descriptor_customization(index)
 	var/static/list/translation = CUSTOM_PREFIX_TRANSLATION_LIST
 	var/list/dat = list()
 	var/datum/custom_descriptor_entry/custom_entry = custom_descriptors[index]
-	dat += "<br><b>Custom #[index]:</b> <a href='?_src_=prefs;index=[index];preference=custom_descriptor_prefix;task=change_descriptor'>[translation["[custom_entry.prefix_type]"]]</a><a href='?_src_=prefs;index=[index];preference=custom_descriptor_content;task=change_descriptor'>[custom_entry.content_text]</a>"
+	dat += "<br><b>Черта #[index]:</b> <a href='?_src_=prefs;index=[index];preference=custom_descriptor_prefix;task=change_descriptor'>[translation["[custom_entry.prefix_type]"]]</a><a href='?_src_=prefs;index=[index];preference=custom_descriptor_content;task=change_descriptor'>[custom_entry.content_text]</a>"
 	return dat
 
 /datum/preferences/proc/show_descriptors_ui(mob/user)
 	var/list/dat = list()
 	dat += print_descriptors_page()
-	var/datum/browser/popup = new(user, "descriptors_customization", "<div align='center'>Describe myself</div>", 350, 510)
+	var/datum/browser/popup = new(user, "descriptors_customization", "<div align='center'>Опиши себя</div>", 350, 510)
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 

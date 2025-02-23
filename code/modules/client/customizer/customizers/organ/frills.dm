@@ -1,11 +1,11 @@
 /datum/customizer/organ/frills
 	abstract_type = /datum/customizer/organ/frills
-	name = "Frills"
+	name = "Гребни"
 	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/frills
 	abstract_type = /datum/customizer_choice/organ/frills
-	name = "Frills"
+	name = "Гребни"
 	organ_type = /obj/item/organ/frills
 	organ_slot = ORGAN_SLOT_FRILLS
 
@@ -13,7 +13,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/frills/lizard)
 
 /datum/customizer_choice/organ/frills/lizard
-	name = "Frills"
+	name = "Плавники/гребни"
 	organ_type = /obj/item/organ/frills/lizard
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -37,7 +37,7 @@
 	default_disabled = TRUE
 
 /datum/customizer_choice/organ/frills/anthro
-	name = "Frills"
+	name = "Плавники/гребни"
 	organ_type = /obj/item/organ/frills
 	generic_random_pick = TRUE
 	sprite_accessories = list(

@@ -29,7 +29,7 @@
 /datum/sprite_accessory/tail_feature/spines
 	abstract_type = /datum/sprite_accessory/tail_feature/spines
 	icon = 'icons/mob/sprite_accessory/tail_features/spines.dmi'
-	color_key_name = "Spines"
+	color_key_name = "Цвет шипов"
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_ADJ_LAYER, BODY_UNDER_LAYER)
 
 /datum/sprite_accessory/tail_feature/spines/short

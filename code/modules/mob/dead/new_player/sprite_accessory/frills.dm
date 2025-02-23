@@ -1,7 +1,7 @@
 /datum/sprite_accessory/frills
 	abstract_type = /datum/sprite_accessory/frills
 	icon = 'icons/mob/sprite_accessory/frills/frills.dmi'
-	color_key_name = "Frills"
+	color_key_name = "Цвет плавников"
 	relevant_layers = list(BODY_ADJ_LAYER)
 
 /datum/sprite_accessory/frills/is_visible(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)

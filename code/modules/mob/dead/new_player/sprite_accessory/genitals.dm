@@ -1,7 +1,7 @@
 /datum/sprite_accessory/penis
 	icon = 'icons/mob/sprite_accessory/genitals/penis.dmi'
 	color_keys = 2
-	color_key_names = list("Member", "Skin")
+	color_key_names = list("Член", "Кожа")
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
 
 /datum/sprite_accessory/penis/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
@@ -31,61 +31,61 @@
 
 /datum/sprite_accessory/penis/human
 	icon_state = "human"
-	name = "Plain"
+	name = "Прямой"
 	color_key_defaults = list(KEY_CHEST_COLOR, KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/penis/knotted
 	icon_state = "knotted"
-	name = "Knotted"
+	name = "Узловатый"
 	color_key_defaults = list(null, KEY_CHEST_COLOR)
 	default_colors = list("C52828", null)
 
 /datum/sprite_accessory/penis/knotted2
-	name = "Knotted 2"
+	name = "Узловатый 2"
 	icon_state = "knotted2"
 	color_key_defaults = list(null, KEY_CHEST_COLOR)
 	default_colors = list("C52828", null)
 
 /datum/sprite_accessory/penis/flared
 	icon_state = "flared"
-	name = "Flared"
+	name = "Широкий"
 	color_key_defaults = list(KEY_CHEST_COLOR, KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/penis/barbknot
 	icon_state = "barbknot"
-	name = "Barbed, Knotted"
+	name = "Шипованный, узловатый"
 	color_key_defaults = list(null, KEY_CHEST_COLOR)
 	default_colors = list("C52828", null)
 
 /datum/sprite_accessory/penis/tapered
 	icon_state = "tapered"
-	name = "Tapered"
+	name = "Сужающийся"
 	default_colors = list("C52828", "C52828")
 
 /datum/sprite_accessory/penis/tapered_mammal
 	icon_state = "tapered"
-	name = "Tapered"
+	name = "Сужающийся"
 	color_key_defaults = list(null, KEY_CHEST_COLOR)
 	default_colors = list("C52828", null)
 
 /datum/sprite_accessory/penis/tentacle
 	icon_state = "tentacle"
-	name = "Tentacled"
+	name = "Щупальце"
 	default_colors = list("C52828", "C52828")
 
 /datum/sprite_accessory/penis/hemi
 	icon_state = "hemi"
-	name = "Hemi"
+	name = "Двойной"
 	default_colors = list("C52828", "C52828")
 
 /datum/sprite_accessory/penis/hemiknot
 	icon_state = "hemiknot"
-	name = "Knotted Hemi"
+	name = "Двойной узловатый"
 	default_colors = list("C52828", "C52828")
 
 /datum/sprite_accessory/testicles
 	icon = 'icons/mob/sprite_accessory/genitals/testicles.dmi'
-	color_key_name = "Sack"
+	color_key_name = "Мошонка"
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
 
 /datum/sprite_accessory/testicles/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
@@ -108,7 +108,7 @@
 
 /datum/sprite_accessory/breasts
 	icon = 'icons/mob/sprite_accessory/genitals/breasts.dmi'
-	color_key_name = "Breasts"
+	color_key_name = "Груди"
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
 
 /datum/sprite_accessory/breasts/get_icon_state(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
@@ -123,17 +123,17 @@
 
 /datum/sprite_accessory/breasts/pair
 	icon_state = "pair"
-	name = "Pair"
+	name = "Пара"
 	color_key_defaults = list(KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/breasts/quad
 	icon_state = "quad"
-	name = "Quad"
+	name = "Две пары"
 	color_key_defaults = list(KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/breasts/sextuple
 	icon_state = "sextuple"
-	name = "Sextuple"
+	name = "Три пары"
 	color_key_defaults = list(KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/vagina
@@ -149,30 +149,30 @@
 
 /datum/sprite_accessory/vagina/human
 	icon_state = "human"
-	name = "Plain"
+	name = "Гладкая"
 	default_colors = list("ea6767")
 
 /datum/sprite_accessory/vagina/hairy
 	icon_state = "hairy"
-	name = "Hairy"
+	name = "Покрытая волосами"
 	color_key_defaults = list(KEY_HAIR_COLOR)
 
 /datum/sprite_accessory/vagina/spade
 	icon_state = "spade"
-	name = "Spade"
+	name = "Развёрнутая"
 	default_colors = list("C52828")
 
 /datum/sprite_accessory/vagina/furred
 	icon_state = "furred"
-	name = "Furred"
+	name = "Покрытая шерстью"
 	color_key_defaults = list(KEY_MUT_COLOR_ONE)
 
 /datum/sprite_accessory/vagina/gaping
 	icon_state = "gaping"
-	name = "Gaping"
+	name = "Зияющая"
 	default_colors = list("f99696")
 
 /datum/sprite_accessory/vagina/cloaca
 	icon_state = "cloaca"
-	name = "Cloaca"
+	name = "Клоака"
 	default_colors = list("f99696")

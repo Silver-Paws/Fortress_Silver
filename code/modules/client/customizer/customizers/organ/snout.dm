@@ -1,10 +1,10 @@
 /datum/customizer/organ/snout
 	abstract_type = /datum/customizer/organ/snout
-	name = "Snout"
+	name = "Морда"
 
 /datum/customizer_choice/organ/snout
 	abstract_type = /datum/customizer_choice/organ/snout
-	name = "Snout"
+	name = "Морда"
 	organ_type = /obj/item/organ/snout
 	organ_slot = ORGAN_SLOT_SNOUT
 
@@ -12,7 +12,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/lizard)
 
 /datum/customizer_choice/organ/snout/lizard
-	name = "Lizard Snout"
+	name = "Морда ящерицы"
 	organ_type = /obj/item/organ/snout/lizard
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -30,7 +30,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/vulpkanin)
 
 /datum/customizer_choice/organ/snout/vulpkanin
-	name = "Vulpkian Snout"
+	name = "Вульпкианская морда"
 	organ_type = /obj/item/organ/snout/vulpkanin
 	sprite_accessories = list(
 		/datum/sprite_accessory/snout/lcanid,
@@ -56,7 +56,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/lupian)
 
 /datum/customizer_choice/organ/snout/lupian
-	name = "Lupian Snout"
+	name = "Люпианская морда"
 	organ_type = /obj/item/organ/snout/lupian
 	sprite_accessories = list(
 		/datum/sprite_accessory/snout/husky,
@@ -88,7 +88,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/tajaran)
 
 /datum/customizer_choice/organ/snout/tajaran
-	name = "Tajaran Snout"
+	name = "Мордочка таяран"
 	organ_type = /obj/item/organ/snout/tajaran
 	sprite_accessories = list(
 		/datum/sprite_accessory/snout/tajaran,
@@ -121,7 +121,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/anthro)
 
 /datum/customizer_choice/organ/snout/anthro
-	name = "Wild-Kin Snout"
+	name = "Морда вайлд-кина"
 	organ_type = /obj/item/organ/snout/anthro
 	sprite_accessories = list(
 		/datum/sprite_accessory/snout/bird,
@@ -209,7 +209,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/akula)
 
 /datum/customizer_choice/organ/snout/akula
-	name = "Axian Snout"
+	name = "Морда аксиан"
 	organ_type = /obj/item/organ/snout/akula
 	sprite_accessories = list(
 		/datum/sprite_accessory/snout/shark,
@@ -228,7 +228,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/tabaxi)
 
 /datum/customizer_choice/organ/snout/tabaxi
-	name = "Tabaxian Snout"
+	name = "Мордочки табакси"
 	organ_type = /obj/item/organ/snout/cat
 	sprite_accessories = list(
 	    /datum/sprite_accessory/snout/cat,

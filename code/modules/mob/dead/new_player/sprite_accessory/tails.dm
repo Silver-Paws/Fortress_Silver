@@ -1,7 +1,7 @@
 /datum/sprite_accessory/tail
 	abstract_type = /datum/sprite_accessory/tail
 	icon = 'icons/mob/sprite_accessory/tails/tails.dmi'
-	color_key_name = "Tail"
+	color_key_name = "Цвет хвоста"
 	relevant_layers = list(BODY_FRONT_LAYER, BODY_BEHIND_LAYER)
 	var/can_wag = FALSE
 

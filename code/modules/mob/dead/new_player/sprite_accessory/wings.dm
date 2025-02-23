@@ -1,7 +1,7 @@
 /datum/sprite_accessory/wings
 	abstract_type = /datum/sprite_accessory/wings
 	icon = 'icons/mob/sprite_accessory/wings/wings.dmi'
-	color_key_name = "Wings"
+	color_key_name = "Цвет крыльев"
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
 	/// Whether the sprite accessory has states for open wings (With an "_open" suffix).
 	var/can_open = FALSE

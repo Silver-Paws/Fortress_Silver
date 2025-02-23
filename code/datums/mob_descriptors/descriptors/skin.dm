@@ -1,141 +1,146 @@
 /datum/mob_descriptor/skin
 	abstract_type = /datum/mob_descriptor/skin
 	slot = MOB_DESCRIPTOR_SLOT_SKIN
-	verbage = "%HAVE%"
+	verbage = "у %HIM%"
+	suffix = "кожа"
 
 /datum/mob_descriptor/skin/normal
-	name = "Normal Skin"
+	name = "Обычная"
 
 /datum/mob_descriptor/skin/hairy
-	name = "Hairy Skin"
+	name = "Волосатая"
 
 /datum/mob_descriptor/skin/soft
-	name = "Soft Skin"
+	name = "Мягкая"
 
 /datum/mob_descriptor/skin/rugged
-	name = "Rugged Skin"
+	name = "Огрубевшая"
 
 /datum/mob_descriptor/skin/diseased
-	name = "Diseased Skin"
+	name = "Болезненная"
 
 /datum/mob_descriptor/skin/dry
-	name = "Dry Skin"
+	name = "Сухая"
 
 /datum/mob_descriptor/skin/fine
-	name = "Fine Skin"
+	name = "Изящная"
 
 /datum/mob_descriptor/skin/wrinkled
-	name = "Wrinkled Skin"
+	name = "Морщинистая"
 
 /datum/mob_descriptor/skin/sunkissed
-	name = "Sunkissed Skin"
+	name = "Загорелая"
 
 /datum/mob_descriptor/skin/aged
-	name = "Aged Skin"
+	name = "Состарившаяся"
 
 /datum/mob_descriptor/skin/pockmarked
-	name = "Pockmarked Skin"
+	name = "Рябая"
 
 /datum/mob_descriptor/skin/dusky
-	name = "Dusky Skin"
+	name = "Темнёная"
 
 /datum/mob_descriptor/skin/irritated
-	name = "Irritated Skin"
+	name = "Раздражённая"
 
 /datum/mob_descriptor/skin/ashen
-	name = "Ashen Skin"
+	name = "Пепельная"
 
 /datum/mob_descriptor/scales
 	abstract_type = /datum/mob_descriptor/scales
 	slot = MOB_DESCRIPTOR_SLOT_SKIN
-	verbage = "%HAVE%"
+	verbage = "тело покрывает"
+	suffix = "чешуя"
 
 /datum/mob_descriptor/scales/plain
-	name = "Plain Scales"
+	name = "Прямая и однородная"
 
 /datum/mob_descriptor/scales/rough
-	name = "Rough Scales"
+	name = "Грубоватая"
 
 /datum/mob_descriptor/scales/smooth
-	name = "Smooth Scales"
+	name = "Гладкая"
 
 /datum/mob_descriptor/scales/plated
-	name = "Plated Scales"
+	name = "Пластинчатая"
 
 /datum/mob_descriptor/scales/peeling
-	name = "Peeling Scales"
+	name = "Шелушащаяся"
 
 /datum/mob_descriptor/fur
 	abstract_type = /datum/mob_descriptor/fur
 	slot = MOB_DESCRIPTOR_SLOT_SKIN
-	verbage = "%HAVE%"
+	verbage = "тело покрывает"
+	suffix = "шерсть"
 
 /datum/mob_descriptor/fur/plain
-	name = "Plain Fur"
+	name = "Однородная"
 
 /datum/mob_descriptor/fur/short
-	name = "Short Fur"
+	name = "Короткая"
 
 /datum/mob_descriptor/fur/coarse
-	name = "Coarse Fur"
+	name = "Грубая"
 
 /datum/mob_descriptor/fur/bristly
-	name = "Bristly Fur"
+	name = "Щетинистая"
 
 /datum/mob_descriptor/fur/fluffy
-	name = "Fluffy Fur"
+	name = "Пушистая"
 
 /datum/mob_descriptor/fur/shaggy
-	name = "Shaggy Fur"
+	name = "Лохматая"
 
 /datum/mob_descriptor/fur/silky
-	name = "Silky Fur"
+	name = "Шёлковая"
 
 /datum/mob_descriptor/fur/lank
-	name = "Lank Fur"
+	name = "Гладкая"
 
 /datum/mob_descriptor/fur/mangy
-	name = "Mangy Fur"
+	name = "Облезлая"
 
 /datum/mob_descriptor/fur/velvety
-	name = "Velvety Fur"
+	name = "Бархатистая"
 
 /datum/mob_descriptor/fur/dense
-	name = "Dense Fur"
+	name = "Густая"
 
 /datum/mob_descriptor/fur/matted
-	name = "Matted Fur"
+	name = "Спутанная"
 
 /datum/mob_descriptor/feathers
 	abstract_type = /datum/mob_descriptor/feathers
 	slot = MOB_DESCRIPTOR_SLOT_SKIN
 	verbage = "%HAVE%"
+	suffix = "перья"
 
 /datum/mob_descriptor/feathers/fine
-	name = "Fine Feathers"
+	name = "Утончённые"
 
 /datum/mob_descriptor/feathers/stiff
-	name = "Stiff Feathers"
+	name = "Жесткие"
 
 /datum/mob_descriptor/feathers/frayed
-	name = "Frayed Feathers"
+	name = "Потёртые"
 
 /datum/mob_descriptor/feathers/delicate
-	name = "Delicate Feathers"
+	name = "Нежные"
 
 /datum/mob_descriptor/feathers/soft
-	name = "Soft Feathers"
+	name = "Мягкие"
 
 /datum/mob_descriptor/chitin
 	abstract_type = /datum/mob_descriptor/chitin
 	slot = MOB_DESCRIPTOR_SLOT_SKIN
 	verbage = "%HAVE%"
+	suffix = "хитин"
 
 /datum/mob_descriptor/chitin/smooth
-	name = "Smooth Chitin"
+	name = "Гладкий"
 
 /datum/mob_descriptor/chitin/hard
-	name = "Hard Chitin"
+	name = "Твёрдый"
 
 /datum/mob_descriptor/chitin/fine
-	name = "Fine Chitin"
+	name = "Утончённый"

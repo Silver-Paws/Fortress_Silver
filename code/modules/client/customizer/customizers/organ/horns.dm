@@ -1,11 +1,11 @@
 /datum/customizer/organ/horns
 	abstract_type = /datum/customizer/organ/horns
-	name = "Horns"
+	name = "Рога"
 	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/horns
 	abstract_type = /datum/customizer_choice/organ/horns
-	name = "Horns"
+	name = "Рога"
 	organ_type = /obj/item/organ/horns
 	organ_slot = ORGAN_SLOT_HORNS
 
@@ -16,7 +16,7 @@
 	default_disabled = TRUE
 
 /datum/customizer_choice/organ/horns/humanoid
-	name = "Horns"
+	name = "Рога"
 	organ_type = /obj/item/organ/horns/humanoid
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -55,7 +55,7 @@
 	default_disabled =  TRUE
 
 /datum/customizer_choice/organ/horns/demihuman
-	name = "Horns"
+	name = "Рога"
 	organ_type = /obj/item/organ/horns
 	sprite_accessories = list(
 		/datum/sprite_accessory/horns/simple,
@@ -94,7 +94,7 @@
 	default_disabled =  TRUE
 
 /datum/customizer_choice/organ/horns/anthro
-	name = "Horns"
+	name = "Рога"
 	organ_type = /obj/item/organ/horns
 	sprite_accessories = list(
 		/datum/sprite_accessory/horns/simple,
@@ -133,7 +133,7 @@
 	default_disabled = FALSE
 
 /datum/customizer_choice/organ/horns/humanoid/tiefling
-	name = "Horns"
+	name = "Рога"
 	organ_type = /obj/item/organ/horns
 	generic_random_pick = TRUE
 	sprite_accessories = list(
@@ -169,7 +169,7 @@ datum/customizer/organ/horns/humanoid/dragongirl
 	default_disabled = FALSE
 
 /datum/customizer_choice/organ/horns/humanoid/dragongirl
-	name = "Horns"
+	name = "Рога"
 	organ_type = /obj/item/organ/horns
 	generic_random_pick = TRUE
 	sprite_accessories = list(

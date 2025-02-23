@@ -442,11 +442,11 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			dat += "<br><b>Описания:</b> <a href='?_src_=prefs;preference=descriptors;task=menu'>Изменить</a>"
 			dat += "<br><b>Лодаут:</b> <a href='?_src_=prefs;preference=loadout_item;task=input'>[loadout ? loadout.name : "None"]</a>"
 
-			dat += "<br><b>Headshot(1:1):</b> <a href='?_src_=prefs;preference=headshot;task=input'>Изменить</a>"
+			dat += "<br><b>Headshot (1:1):</b> <a href='?_src_=prefs;preference=headshot;task=input'>Изменить</a>"
 			if(headshot_link != null)
 				dat += "<a href='?_src_=prefs;preference=view_headshot;task=input'>Посмотреть</a>"
 
-			dat += "<br><b>Nudeshot(3:4):</b> <a href='?_src_=prefs;preference=nudeshot;task=input'>Изменить</a>"
+			dat += "<br><b>Nudeshot (3:4):</b> <a href='?_src_=prefs;preference=nudeshot;task=input'>Изменить</a>"
 			if(nudeshot_link != null)
 				dat += "<a href='?_src_=prefs;preference=view_nudeshot;task=input'>Посмотреть</a>"
 			dat += "</td>"
@@ -724,10 +724,10 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	dat += "</td>"
 	dat += "<td width='33%' align='right'>"
-	dat += "<b style='font-size:104%'>[sexual_pref]</b><a href='?_src_=prefs;preference=sexual_pref;task=input'>	Изменить </a><br>"
-	dat += "<b>Be defiant:</b> <a href='?_src_=prefs;preference=be_defiant'>[(defiant) ? "Yes":"No"]</a><br>"
-	dat += "<b>Be a virgin:</b> <a href='?_src_=prefs;preference=be_virgin'>[(virginity) ? "Yes":"No"]</a><br>"
-	dat += "<b>Be voice:</b> <a href='?_src_=prefs;preference=schizo_voice'>[(toggles & SCHIZO_VOICE) ? "Enabled":"Disabled"]</a>"
+	dat += "<b style='font-size:104%'>Ориентация</b><a href='?_src_=prefs;preference=sexual_pref;task=input'>	Изменить </a><br>"
+	dat += "<b>Давать отпор?</b> <a href='?_src_=prefs;preference=be_defiant'>[(defiant) ? "Да":"Нет"]</a><br>"
+	dat += "<b>Быть девственником?</b> <a href='?_src_=prefs;preference=be_virgin'>[(virginity) ? "Да":"Нет"]</a><br>"
+	dat += "<b>Быть советчиком?</b> <a href='?_src_=prefs;preference=schizo_voice'>[(toggles & SCHIZO_VOICE) ? "Да":"Нет"]</a>"
 	dat += "</td>"
 	dat += "</tr>"
 	dat += "</table>"
@@ -1098,11 +1098,11 @@ Slots: [job.spawn_positions]</span>
 
 	dat += "<style>label { display: inline-block; width: 200px; }</style><body>"
 
-	dat += "<center><a href='?_src_=prefs;preference=antag;task=close'>Done</a></center><br>"
+	dat += "<center><a href='?_src_=prefs;preference=antag;task=close'>Готово</a></center><br>"
 
 
 	if(is_total_antag_banned(user.ckey))
-		dat += "<font color=red><b>I am banned from antagonist roles.</b></font><br>"
+		dat += "<font color=red><b>Я в бан-листе ролей антагонистов.</b></font><br>"
 		src.be_special = list()
 
 
@@ -1119,12 +1119,12 @@ Slots: [job.spawn_positions]</span>
 			if(days_remaining)
 				dat += "<b>[capitalize(i)]:</b> <font color=red> \[IN [days_remaining] DAYS]</font><br>"
 			else
-				dat += "<b>[capitalize(i)]:</b> <a href='?_src_=prefs;preference=antag;task=be_special;be_special_type=[i]'>[(i in be_special) ? "Enabled" : "Disabled"]</a><br>"
+				dat += "<b>[capitalize(i)]:</b> <a href='?_src_=prefs;preference=antag;task=be_special;be_special_type=[i]'>[(i in be_special) ? "Включено" : "Отключено"]</a><br>"
 
 
 	dat += "</body>"
 
-	var/datum/browser/noclose/popup = new(user, "antag_setup", "<div align='center'>Special Role</div>", 250, 300) //no reason not to reuse the occupation window, as it's cleaner that way
+	var/datum/browser/noclose/popup = new(user, "antag_setup", "<div align='center'>Роль антагониста</div>", 250, 300) //no reason not to reuse the occupation window, as it's cleaner that way
 	popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
@@ -1318,12 +1318,17 @@ Slots: [job.spawn_positions]</span>
 				save_preferences()
 				SetKeybinds(user)
 
+			/*if("keybindings_reset")	
+				var/choice = tgalert(user, "Вы точно хотите сбросить раскладку клавиатуры?", "Сброс раскладки клавиш", "Однозначно", "Пожалуй, нет")
+				if(choice == "Пожалуй, нет")
+					ShowChoices(user,3)
+					return */
 			if("keybindings_reset")
 				var/choice = tgalert(user, "Do you really want to reset your keybindings?", "Setup keybindings", "Do It", "Cancel")
 				if(choice == "Cancel")
 					ShowChoices(user,3)
 					return
-				hotkeys = (choice == "Do It")
+				hotkeys = (choice == "Do it")
 				key_bindings = (hotkeys) ? deepCopyList(GLOB.hotkey_keybinding_list_by_key) : deepCopyList(GLOB.classic_keybinding_list_by_key)
 				user.client.update_movement_keys()
 				SetKeybinds(user)
@@ -1422,7 +1427,7 @@ Slots: [job.spawn_positions]</span>
 //						age = max(min( round(text2num(new_age)), AGE_MAX),AGE_MIN)
 
 				if("age")
-					var/new_age = input(user, "Choose your character's age:", "Yils Dead") as null|anything in pref_species.possible_ages
+					var/new_age = input(user, "Выберите возраст персонажа:", "Yils Dead") as null|anything in pref_species.possible_ages
 					if(new_age)
 						age = new_age
 						var/list/hairs
@@ -1443,7 +1448,7 @@ Slots: [job.spawn_positions]</span>
 						if(!faith.name)
 							continue
 						faiths_named[faith.name] = faith
-					var/faith_input = input(user, "Choose your character's faith", "Faith") as null|anything in faiths_named
+					var/faith_input = input(user, "Выберите веру персонажа:", "Faith") as null|anything in faiths_named
 					if(faith_input)
 						var/datum/faith/faith = faiths_named[faith_input]
 						to_chat(user, "<font color='purple'>Вера: [faith.name]</font>")
@@ -1459,7 +1464,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						patrons_named[patron.name] = patron
 					var/datum/faith/current_faith = GLOB.faithlist[selected_patron?.associated_faith] || GLOB.faithlist[initial(default_patron.associated_faith)]
-					var/god_input = input(user, "Choose your character's patron god", "[current_faith.name]") as null|anything in patrons_named
+					var/god_input = input(user, "Выберите бога-покровителя персонажа:", "[current_faith.name]") as null|anything in patrons_named
 					if(god_input)
 						selected_patron = patrons_named[god_input]
 						to_chat(user, "<font color='purple'>Патрон: [selected_patron]</font>")
@@ -1473,10 +1478,10 @@ Slots: [job.spawn_positions]</span>
 					return
 
 				if("voice")
-					var/new_voice = input(user, "Choose your character's voice color:", "Character Preference","#"+voice_color) as color|null
+					var/new_voice = input(user, "Выберите цвет голоса персонажа:", "Настройка цвета","#"+voice_color) as color|null
 					if(new_voice)
 						if(color_hex2num(new_voice) < 230)
-							to_chat(user, "<font color='red'>This voice color is too dark for mortals.</font>")
+							to_chat(user, "<font color='red'>Этот цвет слишком тёмный для смертных.</font>")
 							return
 						voice_color = sanitize_hexcolor(new_voice)
 
@@ -1495,10 +1500,10 @@ Slots: [job.spawn_positions]</span>
 					return
 
 				if("voice_pitch")
-					var/new_voice_pitch = input(user, "Choose your character's voice pitch ([MIN_VOICE_PITCH] to [MAX_VOICE_PITCH], lower is deeper):", "Voice Pitch") as null|num
+					var/new_voice_pitch = input(user, "Выберите высоту голоса персонажа ([MIN_VOICE_PITCH] до [MAX_VOICE_PITCH], меньше - глубже):", "Тон голоса") as null|num
 					if(new_voice_pitch)
 						if(new_voice_pitch < MIN_VOICE_PITCH || new_voice_pitch > MAX_VOICE_PITCH)
-							to_chat(user, "<font color='red'>Value must be between [MIN_VOICE_PITCH] and [MAX_VOICE_PITCH].</font>")
+							to_chat(user, "<font color='red'>Значение должно быть между [MIN_VOICE_PITCH] и [MAX_VOICE_PITCH].</font>")
 							return
 						voice_pitch = new_voice_pitch
 
@@ -1506,7 +1511,7 @@ Slots: [job.spawn_positions]</span>
 					to_chat(user, "<span class='notice'>Пожалуйста, используйте относительно SFW изображение головы и плеч, чтобы сохранить уровень погружения. И последнее, ["<span class='bold'>не используйте фотографии из реальной жизни или любые несерьезные, мемные изображения.</span>"]</span>")
 					to_chat(user, "<span class='notice'>Если фотокарточка не отображается в игре, убедитесь, что это прямая ссылка на изображение, которая правильно открывается в браузере.</span>")
 					to_chat(user, "<span class='notice'>Разрешение: 250x250 pixels.</span>")
-					var/new_headshot_link = input(user, "Input the headshot link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Headshot", headshot_link) as text|null
+					var/new_headshot_link = input(user, "Вставьте ссылку картинки-headshot'а (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Headshot", headshot_link) as text|null
 					if(new_headshot_link == null)
 						return
 					if(new_headshot_link == "")
@@ -1518,14 +1523,14 @@ Slots: [job.spawn_positions]</span>
 						ShowChoices(user)
 						return
 					headshot_link = new_headshot_link
-					to_chat(user, "<span class='notice'>Successfully updated headshot picture</span>")
+					to_chat(user, "<span class='notice'>Фотокарточка успешно обновлена</span>")
 					log_game("[user] has set their Headshot image to '[headshot_link]'.")
 
 				if("nudeshot")
 					to_chat(user, "<span class='notice'>["<span class='bold'>Не используйте фотографии из реальной жизни или любые несерьезные, мемные изображения.</span>"]</span>")
 					to_chat(user, "<span class='notice'>Если фотокарточка не отображается в игре, убедитесь, что это прямая ссылка на изображение, которая правильно открывается в браузере.</span>")
 					to_chat(user, "<span class='notice'>Разрешение: 360x480 pixels.</span>")
-					var/new_nudeshot_link = input(user, "Input the nudeshot link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Nudeshot", nudeshot_link) as text|null
+					var/new_nudeshot_link = input(user, "Вставьте ссылку картинки-nudeshot'а (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Nudeshot", nudeshot_link) as text|null
 					if(new_nudeshot_link == null)
 						return
 					if(new_nudeshot_link == "")
@@ -1537,7 +1542,7 @@ Slots: [job.spawn_positions]</span>
 						ShowChoices(user)
 						return
 					nudeshot_link = new_nudeshot_link
-					to_chat(user, "<span class='notice'>Successfully updated nudeshot picture</span>")
+					to_chat(user, "<span class='notice'>Фотокарточка успешно обновлена</span>")
 					log_game("[user] has set their Nudeshot image to '[nudeshot_link]'.")
 
 				if("loadout_item")
@@ -1551,18 +1556,18 @@ Slots: [job.spawn_positions]</span>
 								continue
 							loadouts_available[loadout.name] = loadout
 	
-					var/loadout_input = input(user, "Choose your character's loadout item.", "Loadout") as null|anything in loadouts_available
+					var/loadout_input = input(user, "Выберите предмет лодаута.", "Лодаут") as null|anything in loadouts_available
 					if(loadout_input)
 						if(loadout_input == "None")
 							loadout = null
-							to_chat(user, "Who needs stuff anyway?")
+							to_chat(user, "Да кому нужны эти шмотки, взаправду?")
 						else
 							loadout = loadouts_available[loadout_input]
 							to_chat(user, "<font color='yellow'><b>[loadout.name]</b></font>")
 							if(loadout.desc)
 								to_chat(user, "[loadout.desc]")
 					else
-						to_chat(user, "You are not authorized to use this loadout.")
+						to_chat(user, "Вам нельзя использовать этот лодаут.")
 
 
 				if("species")
@@ -1578,7 +1583,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a race", "Roguetown") as null|anything in crap
+					var/result = input(user, "Выберите расу", "Roguetown") as null|anything in crap
 
 					if(result)
 						set_new_race(result, user)
@@ -1588,7 +1593,7 @@ Slots: [job.spawn_positions]</span>
 
 				if("charflaw")
 					var/list/coom = GLOB.character_flaws.Copy()
-					var/result = input(user, "Select a flaw", "Roguetown") as null|anything in coom
+					var/result = input(user, "Выберите изъян", "Roguetown") as null|anything in coom
 					if(result)
 						result = coom[result]
 						var/datum/charflaw/C = new result()
@@ -1600,26 +1605,26 @@ Slots: [job.spawn_positions]</span>
 
 
 				if("mutant_color")
-					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Choose your character's mutant #1 color:", "Character Preference","#"+features["mcolor"])
+					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Выберите цвет mutant #1:", "Настройка цвета","#"+features["mcolor"])
 					if(new_mutantcolor)
 
 						features["mcolor"] = sanitize_hexcolor(new_mutantcolor)
 						try_update_mutant_colors()
 
 				if("mutant_color2")
-					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Choose your character's mutant #2 color:", "Character Preference","#"+features["mcolor2"])
+					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Выберите цвет mutant #2:", "Настройка цвета","#"+features["mcolor2"])
 					if(new_mutantcolor)
 						features["mcolor2"] = sanitize_hexcolor(new_mutantcolor)
 						try_update_mutant_colors()
 
 				if("mutant_color3")
-					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Choose your character's mutant #3 color:", "Character Preference","#"+features["mcolor3"])
+					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Выберите цвет mutant #3 :", "Настройка цвета","#"+features["mcolor3"])
 					if(new_mutantcolor)
 						features["mcolor3"] = sanitize_hexcolor(new_mutantcolor)
 						try_update_mutant_colors()
 				
 				if("char_accent")
-					var/selectedaccent = input(user, "Choose your character's accent:", "Character Preference") as null|anything in GLOB.character_accents
+					var/selectedaccent = input(user, "Выберите персонажу акцент:", "Акцент") as null|anything in GLOB.character_accents
 					if(selectedaccent)
 						char_accent = selectedaccent
 
@@ -1637,7 +1642,7 @@ Slots: [job.spawn_positions]</span>
 */
 				if("s_tone")
 					var/listy = pref_species.get_skin_list()
-					var/new_s_tone = input(user, "Choose your character's skin tone:", "Sun")  as null|anything in listy
+					var/new_s_tone = input(user, "Выберите из списка", "Sun")  as null|anything in listy
 					if(new_s_tone)
 						skin_tone = listy[new_s_tone]
 						try_update_mutant_colors()
@@ -1732,9 +1737,10 @@ Slots: [job.spawn_positions]</span>
 
 				if("sexual_pref")
 					var/listy = GLOB.sexual_prefs_list
-					var/new_sexual_pref = input(user, "Choose your character's sexual preferences:", "Sexual Prefences")  as null|anything in listy
+					var/new_sexual_pref = input(user, "Выберите ориентацию своего персонажа", "Ориентация")  as null|anything in listy
 					if(new_sexual_pref)
 						sexual_pref = listy[new_sexual_pref]
+						to_chat(user, "<span class='notice'>Выбрана ориентация: [sexual_pref]</span>")
 
 		else
 			switch(href_list["preference"])
@@ -1764,9 +1770,9 @@ Slots: [job.spawn_positions]</span>
 					if(next_special_trait)
 						print_special_text(user, next_special_trait)
 						return
-					to_chat(user, span_boldwarning("You will become special for one round, this could be something negative, positive or neutral and could have a high impact on your character and your experience."))
-					var/result = alert(user, "You'll receive a unique trait for one round\nDo I really want become special?", "Be Special", "Yes", "No")
-					if(result != "Yes")
+					to_chat(user, span_boldwarning("Вы получите особенность-черту на один раунд, она может быть изьяном, достоинством или чем-то нейтральным. Она может оказать большое влияние на персонажа и ваш игровой опыт."))
+					var/result = alert(user, "Вы получите уникальную черту на один раунд\nВзаправду ли вы хотите быть особенным?", "Получить особенность", "Да", "Нет")
+					if(result != "Да")
 						return
 					if(next_special_trait)
 						return
@@ -1775,8 +1781,8 @@ Slots: [job.spawn_positions]</span>
 						log_game("SPECIALS: Rolled [next_special_trait] for ckey: [user.ckey]")
 						print_special_text(user, next_special_trait)
 						user.playsound_local(user, 'sound/misc/alert.ogg', 100)
-						to_chat(user, span_warning("This will be applied on your next game join. You cannot reroll this, and it will not carry over to other rounds"))
-						to_chat(user, span_warning("You may switch your character and choose any role, if you don't meet the requirements (if any are specified) it won't be applied"))
+						to_chat(user, span_warning("Оно будет применено в вашем следующем раунде. Вы не можете получить новую черту, и она не переносится в другие раунды."))
+						to_chat(user, span_warning("Вы можете сменить персонажа или его роль, если условия не соблюдены (Если они указаны), черта не применится."))
 
 				if("family")
 					if(family == FAMILY_NONE)
@@ -1847,11 +1853,11 @@ Slots: [job.spawn_positions]</span>
 					save_preferences()
 
 				if("keybindings_reset")
-					var/choice = tgalert(user, "Do you really want to reset your keybindings?", "Setup keybindings", "Do It", "Cancel")
+					var/choice = tgalert(user, "Вы точно хотите сбросить раскладку клавиатуры?", "Настройка раскладки клавиш", "Do it", "Cancel")
 					if(choice == "Cancel")
 						ShowChoices(user,3)
 						return
-					hotkeys = (choice == "Do It")
+					hotkeys = (choice == "Do it")
 					key_bindings = (hotkeys) ? deepCopyList(GLOB.hotkey_keybinding_list_by_key) : deepCopyList(GLOB.classic_keybinding_list_by_key)
 					user.client.update_movement_keys()
 				if("chat_on_map")
@@ -1972,25 +1978,25 @@ Slots: [job.spawn_positions]</span>
 				if("be_defiant")
 					defiant = !defiant
 					if(defiant)
-						to_chat(user, span_notice("You will now have resistance from people violating you, but be punished for trying to violate others." + " " + span_boldwarning("(COMBAT Mode will disable ERP interactions. Bypassing this is a bannable offense, AHELP if necessary.)")))
+						to_chat(user, span_notice("Defiant. Вы способны дать отпор насильникам, но будете наказаны при попытке изнасиловать кого-то" + " " + span_boldwarning("(COMBAT Mode отключит ERP взаимодействия. Обход этого - нарушение, при нужде используйте AHELP).")))
 					else
-						to_chat(user, span_boldwarning("You fully immerse yourself in the grim experience, waiving your resistance from people violating you, but letting you do the same unto other non-defiants"))
+						to_chat(user, span_boldwarning("Not Defiant. Вы отдаёте себя и своё тело мрачному опыту, не сопротивляясь насильникам, но дозволяя и себе сексуальное насилие к не дающим отпор душам."))
 
 				if("be_virgin")
 					virginity = !virginity
 					if(virginity)
-						to_chat(user, span_notice("You have not once indulged in the temptations of the flesh.")) 
+						to_chat(user, span_notice("Вы ни разу не поддавались искушениям плоти.")) 
 					else
-						to_chat(user, span_notice("You have. In a word. Fucked before.")) //Someone word this better please kitty is high and words are hard
+						to_chat(user, span_notice("Вы, в целом... Двумя словами... Уже трахались.")) //Someone word this better please kitty is high and words are hard
 
 				if("schizo_voice")
 					toggles ^= SCHIZO_VOICE
 					if(toggles & SCHIZO_VOICE)
-						to_chat(user, "<span class='warning'>You are now a voice.\n\
-										As a voice, you will receive meditations from players asking about game mechanics!\n\
-										Good voices will be rewarded with PQ for answering meditations, while bad ones are punished at the discretion of jannies.</span>")
+						to_chat(user, "<span class='warning'>Вы теперь будете давать подсказки как внутренний голос.\n\
+										Как советчик, вы слышите медитации игроков, вопрошающих об игровых механиках!\n\
+										Хорошие советчики будут награждены PQ за ответы на медитации, а плохие - отданы на Божий суд.</span>")
 					else
-						to_chat(user, span_warning("You are no longer a voice."))
+						to_chat(user, span_warning("Вы более не советчик."))
 
 				if("migrants")
 					migrant.show_ui()
@@ -2229,7 +2235,7 @@ Slots: [job.spawn_positions]</span>
 	find_index = findtext(value, link_regex)
 	if(find_index != 9)
 		if(!silent)
-			to_chat(usr, "<span class='warning'>The image must be hosted on one of the following sites: 'Gyazo, Lensdump, Imgbox, Catbox'</span>")
+			to_chat(usr, "<span class='warning'>Изображение должно быть с одного из следующих сайтов: 'Gyazo, Lensdump, Imgbox, Catbox'</span>")
 		return FALSE
 	return TRUE
 

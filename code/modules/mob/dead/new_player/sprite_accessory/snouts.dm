@@ -1,7 +1,7 @@
 /datum/sprite_accessory/snout
 	abstract_type = /datum/sprite_accessory/snout
 	icon = 'icons/mob/sprite_accessory/snouts/snouts.dmi'
-	color_key_name = "Snout"
+	color_key_name = "Цвет морды"
 	relevant_layers = list(BODY_ADJ_LAYER)
 
 /datum/sprite_accessory/snout/is_visible(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)

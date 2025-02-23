@@ -1,8 +1,8 @@
 /datum/mob_descriptor/defiant
-	name = "Defiant"
+	name = "Сопротивляться?	"
 	slot = MOB_DESCRIPTOR_SLOT_NOTHING
-	verbage = "looks"
-	describe = "defiant!"
+	verbage = "даст отпор"
+	describe = "в случае посягательства на %HIM%!"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/defiant/can_describe(mob/living/described)
@@ -27,9 +27,9 @@
 	return TRUE
 
 /datum/mob_descriptor/age
-	name = "Age"
+	name = "Возраст"
 	slot = MOB_DESCRIPTOR_SLOT_AGE
-	verbage = "looks"
+	verbage = "выглядит"
 
 /datum/mob_descriptor/age/can_describe(mob/living/described)
 	if(!ishuman(described))
@@ -39,16 +39,30 @@
 /datum/mob_descriptor/age/get_description(mob/living/described)
 	var/mob/living/carbon/human/human = described
 	if(human.age == AGE_OLD)
-		return "old"
+		if(described.gender == MALE)
+			return "старым"
+		else
+			return "старой"
 	else if (human.age == AGE_MIDDLEAGED)
-		return "middle-aged"
+		if(described.gender == MALE)
+			return "зрелым"
+		else
+			return "зрелой"
 	else
-		return "adult"
+		if(described.gender == MALE)
+			return "молодо"
+		else
+			return "молодая"
+
+	if(described.gender == MALE)
+		return "%MAN%"
+	else
+		return "%MAN%"
 
 /datum/mob_descriptor/penis
-	name = "penis"
+	name = "член"
 	slot = MOB_DESCRIPTOR_SLOT_PENIS
-	verbage = "has"
+	verbage = "в наличии"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/penis/can_describe(mob/living/described)
@@ -68,31 +82,31 @@
 	var/adjective
 	switch(penis.penis_size)
 		if(1)
-			adjective = "a small"
+			adjective = "маленький"
 		if(2)
-			adjective = "an average"
+			adjective = "средний"
 		if(3)
-			adjective = "a large"
+			adjective = "большой"
 	var/used_name
 	if(penis.erect_state != ERECT_STATE_HARD && penis.sheath_type != SHEATH_TYPE_NONE)
 		switch(penis.sheath_type)
 			if(SHEATH_TYPE_NORMAL)
 				if(penis.penis_size == 3)
-					used_name = "a fat sheath"
+					used_name = "объёмные ножны"
 				if(penis.penis_size == 1)
-					used_name = "a small sheath"
+					used_name = "небольшие ножны"
 				else
-					used_name = "a sheath"
+					used_name = "ножны"
 			if(SHEATH_TYPE_SLIT)
-				used_name = "a genital slit"
+				used_name = "щель"
 	else
 		used_name = "[adjective] [penis.name]"
 	return "[used_name]"
 
 /datum/mob_descriptor/testicles
-	name = "balls"
+	name = "яйца"
 	slot = MOB_DESCRIPTOR_SLOT_TESTICLES
-	verbage = "has"
+	verbage = "видны"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/testicles/can_describe(mob/living/described)
@@ -114,17 +128,17 @@
 	var/adjective
 	switch(testes.ball_size)
 		if(1)
-			adjective = "a small"
+			adjective = "крохотные"
 		if(2)
-			adjective = "an average"
+			adjective = "нормальные"
 		if(3)
-			adjective = "a large"
-	return "[adjective] pair of balls"
+			adjective = "здоровые"
+	return "[adjective] семенники"
 
 /datum/mob_descriptor/vagina
-	name = "vagina"
+	name = "вагина"
 	slot = MOB_DESCRIPTOR_SLOT_VAGINA
-	verbage = "has"
+	verbage = ""
 	show_obscured = TRUE
 
 /datum/mob_descriptor/vagina/can_describe(mob/living/described)
@@ -139,12 +153,12 @@
 	return TRUE
 
 /datum/mob_descriptor/vagina/get_description(mob/living/described)
-	return "a vagina"
+	return "вагина"
 
 /datum/mob_descriptor/breasts
-	name = "breasts"
+	name = "груди"
 	slot = MOB_DESCRIPTOR_SLOT_BREASTS
-	verbage = "has"
+	verbage = ""
 	show_obscured = TRUE
 
 /datum/mob_descriptor/breasts/can_describe(mob/living/described)
@@ -164,23 +178,23 @@
 	var/adjective
 	switch(breasts.breast_size)
 		if(0)
-			adjective = "a flat"
+			adjective = "Плоские"
 		if(1)
-			adjective = "a very small"
+			adjective = "Небольшие"
 		if(2)
-			adjective = "a small"
+			adjective = "Маленькие"
 		if(3)
-			adjective = "an average"
+			adjective = "Средние"
 		if(4)
-			adjective = "a large"
+			adjective = "Большие"
 		if(5)
-			adjective = "an enormous"
-	return "[adjective] pair of breasts"
+			adjective = "Огромные"
+	return "[adjective] груди"
 
 /datum/mob_descriptor/sexual
-	name = "Sexual preferences"
+	name = "Сексуальные пристрастия"
 	slot = MOB_DESCRIPTOR_SLOT_NOTHING
-	verbage = "looks like %THEY% is attracted to"
+	verbage = "предпочитает, судя по всему,"
 
 /datum/mob_descriptor/sexual/can_describe(mob/living/described)
 	if(!ishuman(described))
@@ -190,8 +204,8 @@
 /datum/mob_descriptor/sexual/get_description(mob/living/described)
 	var/mob/living/carbon/human/human = described
 	if(human.client.prefs.sexual_pref == SEXUAL_PREF_HETERO)
-		return "opposite gender"
+		return "противоположный пол"
 	else if (human.client.prefs.sexual_pref == SEXUAL_PREF_SAME)
-		return "%HIS% own gender"
+		return "%HIS% собственный пол"
 	else
-		return "both genders"
+		return "и женщин, и мужчин"

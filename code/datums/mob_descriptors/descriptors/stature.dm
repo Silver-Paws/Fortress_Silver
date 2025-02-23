@@ -3,49 +3,55 @@
 	slot = MOB_DESCRIPTOR_SLOT_STATURE
 
 /datum/mob_descriptor/stature/man
-	name = "Man/Woman"
+	name = "Мужчина/Женщина"
 
 /datum/mob_descriptor/stature/man/get_description(mob/living/described)
 	if(described.gender == MALE)
-		return "man"
+		return "%MAN%"
 	else
-		return "woman"
+		return "%MAN%"
 
 /datum/mob_descriptor/stature/gentleman
-	name = "Gentleman/Gentlewoman"
+	name = "Господин/Госпожа"
 
 /datum/mob_descriptor/stature/gentleman/get_description(mob/living/described)
 	if(described.gender == MALE)
-		return "gentleman"
+		return "господин"
 	else
-		return "gentlewoman"
+		return "госпожа"
 
 /datum/mob_descriptor/stature/thug
-	name = "Thug"
+	name = "Головорез"
 
 /datum/mob_descriptor/stature/snob
-	name = "Snob"
+	name = "Сноб"
 
 /datum/mob_descriptor/stature/slob
-	name = "Slob"
+	name = "Тупица"
 
 /datum/mob_descriptor/stature/brute
-	name = "Brute"
+	name = "Изверг"
 
 /datum/mob_descriptor/stature/highbrow
-	name = "Highbrow"
+	name = "Интеллектуал"
 
 /datum/mob_descriptor/stature/stooge
-	name = "Stooge"
+	name = "Посмешище"
 
 /datum/mob_descriptor/stature/fool
-	name = "Fool"
+	name = "Дурак/Дура"
+
+/datum/mob_descriptor/stature/fool/get_description(mob/living/described)
+	if(described.gender == MALE)
+		return "дурак"
+	else
+		return "дура"
 
 /datum/mob_descriptor/stature/bookworm
-	name = "Bookworm"
+	name = "Книголюб"
 
 /datum/mob_descriptor/stature/lowlife
-	name = "Lowlife"
+	name = "Ничтожество"
 
 /datum/mob_descriptor/stature/dignitary
-	name = "Dignitary"
+	name = "Чиновник"

@@ -1,13 +1,13 @@
 /datum/customizer/organ/penis
 	abstract_type = /datum/customizer/organ/penis
-	name = "Penis"
+	name = "Член"
 
 /datum/customizer/organ/penis/is_allowed(datum/preferences/prefs)
 	return (prefs.gender == MALE)
 
 /datum/customizer_choice/organ/penis
 	abstract_type = /datum/customizer_choice/organ/penis
-	name = "Penis"
+	name = "Член"
 	organ_type = /obj/item/organ/penis
 	organ_slot = ORGAN_SLOT_PENIS
 	organ_dna_type = /datum/organ_dna/penis
@@ -27,14 +27,14 @@
 /datum/customizer_choice/organ/penis/generate_pref_choices(list/dat, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
 	var/datum/customizer_entry/organ/penis/penis_entry = entry
-	dat += "<br>Penis size: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=penis_size''>[find_key_by_value(GLOB.named_penis_sizes, penis_entry.penis_size)]</a>"
+	dat += "<br>Размер члена: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=penis_size''>[find_key_by_value(GLOB.named_penis_sizes, penis_entry.penis_size)]</a>"
 
 /datum/customizer_choice/organ/penis/handle_topic(mob/user, list/href_list, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
 	var/datum/customizer_entry/organ/penis/penis_entry = entry
 	switch(href_list["customizer_task"])
 		if("penis_size")
-			var/named_size = input(user, "Choose your penis size:", "Character Preference", find_key_by_value(GLOB.named_penis_sizes, penis_entry.penis_size)) as anything in GLOB.named_penis_sizes
+			var/named_size = input(user, "Выберите размер члена:", "Настройка персонажа", find_key_by_value(GLOB.named_penis_sizes, penis_entry.penis_size)) as anything in GLOB.named_penis_sizes
 			if(isnull(named_size))
 				return
 			var/new_size = GLOB.named_penis_sizes[named_size]
@@ -88,19 +88,19 @@
 		)
 
 /datum/customizer_choice/organ/penis/human
-	name = "Plain Penis"
+	name = "Обычный"
 	organ_type = /obj/item/organ/penis
 	sprite_accessories = list(/datum/sprite_accessory/penis/human)
 	allows_accessory_color_customization = FALSE
 
 /datum/customizer_choice/organ/penis/human_anthro
-	name = "Plain Penis"
+	name = "Обычный"
 	organ_type = /obj/item/organ/penis
 	sprite_accessories = list(/datum/sprite_accessory/penis/human)
 	allows_accessory_color_customization = TRUE
 
 /datum/customizer_choice/organ/penis/knotted
-	name = "Knotted Penis"
+	name = "Узловатый"
 	organ_type = /obj/item/organ/penis/knotted
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/knotted,
@@ -108,56 +108,56 @@
 		)
 	
 /datum/customizer_choice/organ/penis/equine
-	name = "Equine Penis"
+	name = "Конский"
 	organ_type = /obj/item/organ/penis/equine
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/flared,
 		)
 
 /datum/customizer_choice/organ/penis/tapered_mammal
-	name = "Tapered Penis (Mammal)"
+	name = "Сужающийся (Ножны)"
 	organ_type = /obj/item/organ/penis/tapered_mammal
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/tapered_mammal,
 		)
 
 /datum/customizer_choice/organ/penis/tapered
-	name = "Tapered Penis"
+	name = "Сужающийся"
 	organ_type = /obj/item/organ/penis/tapered
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/tapered,
 		)
 
 /datum/customizer_choice/organ/penis/tapered_double
-	name = "Hemi Tapered Penis"
+	name = "Двойной сужающийся"
 	organ_type = /obj/item/organ/penis/tapered
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemi,
 		)
 
 /datum/customizer_choice/organ/penis/tapered_double_knot
-	name = "Knotted Hemi Tapered Penis"
+	name = "Двойной узловатый сужающийся"
 	organ_type = /obj/item/organ/penis/tapered
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemiknot,
 		)
 
 /datum/customizer_choice/organ/penis/barbed
-	name = "Barbed Penis"
+	name = "Шипованный"
 	organ_type = /obj/item/organ/penis/barbed
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/barbknot,
 		)
 
 /datum/customizer_choice/organ/penis/barbed_knotted
-	name = "Barbed Knotted Penis"
+	name = "Шипованный узловатый"
 	organ_type = /obj/item/organ/penis/barbed_knotted
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/barbknot,
 		)
 
 /datum/customizer_choice/organ/penis/tentacle
-	name = "Tentacle Penis"
+	name = "Член-щупальце"
 	organ_type = /obj/item/organ/penis/tentacle
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/tentacle,
@@ -165,14 +165,14 @@
 
 /datum/customizer/organ/testicles
 	abstract_type = /datum/customizer/organ/testicles
-	name = "Testicles"
+	name = "Семенники"
 
 /datum/customizer/organ/testicles/is_allowed(datum/preferences/prefs)
 	return (prefs.gender == MALE)
 
 /datum/customizer_choice/organ/testicles
 	abstract_type = /datum/customizer_choice/organ/testicles
-	name = "Testicles"
+	name = "Яички"
 	organ_type = /obj/item/organ/testicles
 	organ_dna_type = /datum/organ_dna/testicles
 	customizer_entry_type = /datum/customizer_entry/organ/testicles
@@ -195,7 +195,7 @@
 	..()
 	if(can_customize_size)
 		var/datum/customizer_entry/organ/testicles/testicles_entry = entry
-		dat += "<br>Ball size: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=ball_size''>[find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)]</a>"
+		dat += "<br>Размер мошонки: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=ball_size''>[find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)]</a>"
 
 /datum/customizer_choice/organ/testicles/handle_topic(mob/user, list/href_list, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
@@ -203,7 +203,7 @@
 		var/datum/customizer_entry/organ/testicles/testicles_entry = entry
 		switch(href_list["customizer_task"])
 			if("ball_size")
-				var/named_size = input(user, "Choose your ball size:", "Character Preference", find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)) as anything in GLOB.named_ball_sizes
+				var/named_size = input(user, "Выберите размер мошонки:", "Настройка персонажа", find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)) as anything in GLOB.named_ball_sizes
 				if(isnull(named_size))
 					return
 				var/new_size = GLOB.named_ball_sizes[named_size]
@@ -225,16 +225,16 @@
 	)
 
 /datum/customizer_choice/organ/testicles/external
-	name = "Testicles"
+	name = "Яички"
 	sprite_accessories = list(/datum/sprite_accessory/testicles/pair)
 
 /datum/customizer_choice/organ/testicles/human
-	name = "Testicles"
+	name = "Яички"
 	sprite_accessories = list(/datum/sprite_accessory/testicles/pair)
 	allows_accessory_color_customization = FALSE
 
 /datum/customizer_choice/organ/testicles/internal
-	name = "Internal testicles"
+	name = "Внутренние семенники"
 	organ_type = /obj/item/organ/testicles/internal
 	sprite_accessories = null
 	can_customize_size = FALSE
@@ -244,14 +244,14 @@
 
 /datum/customizer/organ/breasts
 	abstract_type = /datum/customizer/organ/breasts
-	name = "Breasts"
+	name = "Груди"
 
 /datum/customizer/organ/breasts/is_allowed(datum/preferences/prefs)
 	return (prefs.gender == FEMALE)
 
 /datum/customizer_choice/organ/breasts
 	abstract_type = /datum/customizer_choice/organ/breasts
-	name = "Breasts"
+	name = "Груди"
 	customizer_entry_type = /datum/customizer_entry/organ/breasts
 	organ_type = /obj/item/organ/breasts
 	organ_slot = ORGAN_SLOT_BREASTS
@@ -272,14 +272,14 @@
 /datum/customizer_choice/organ/breasts/generate_pref_choices(list/dat, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
 	var/datum/customizer_entry/organ/breasts/breasts_entry = entry
-	dat += "<br>Breast size: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=breast_size''>[find_key_by_value(GLOB.named_breast_sizes, breasts_entry.breast_size)]</a>"
+	dat += "<br>Размер грудей: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=breast_size''>[find_key_by_value(GLOB.named_breast_sizes, breasts_entry.breast_size)]</a>"
 
 /datum/customizer_choice/organ/breasts/handle_topic(mob/user, list/href_list, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
 	var/datum/customizer_entry/organ/breasts/breasts_entry = entry
 	switch(href_list["customizer_task"])
 		if("breast_size")
-			var/named_size = input(user, "Choose your breast size:", "Character Preference", find_key_by_value(GLOB.named_breast_sizes, breasts_entry.breast_size)) as anything in GLOB.named_breast_sizes
+			var/named_size = input(user, "Выберите размер грудей:", "Настройка персонажа", find_key_by_value(GLOB.named_breast_sizes, breasts_entry.breast_size)) as anything in GLOB.named_breast_sizes
 			if(isnull(named_size))
 				return
 			var/new_size = GLOB.named_breast_sizes[named_size]
@@ -310,14 +310,14 @@
 
 /datum/customizer/organ/vagina
 	abstract_type = /datum/customizer/organ/vagina
-	name = "Vagina"
+	name = "Вагина"
 
 /datum/customizer/organ/vagina/is_allowed(datum/preferences/prefs)
 	return (prefs.gender == FEMALE)
 
 /datum/customizer_choice/organ/vagina
 	abstract_type = /datum/customizer_choice/organ/vagina
-	name = "Vagina"
+	name = "Вагина"
 	organ_type = /obj/item/organ/vagina
 	organ_slot = ORGAN_SLOT_VAGINA
 

@@ -77,7 +77,7 @@
 			dat += "<br>[arrows_string]<a [accessory_link]>[accessory.name]</a>"
 
 		if(allows_accessory_color_customization)
-			dat += "<br><a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=reset_colors'>Reset colors</a>"
+			dat += "<br><a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=reset_colors'>Сбросить цвета</a>"
 			var/list/color_list = color_string_to_list(entry.accessory_colors)
 			for(var/index in 1 to accessory.color_keys)
 				var/named_index = (accessory.color_keys == 1) ? accessory.color_key_name : accessory.color_key_names[index]
@@ -92,7 +92,7 @@
 			for(var/choice_type in sprite_accessories)
 				var/datum/sprite_accessory/accessory = SPRITE_ACCESSORY(choice_type)
 				choice_list[accessory.name] = choice_type
-			var/chosen_input = input(user, "Choose your [lowertext(name)] appearance:", "Character Preference")  as null|anything in choice_list
+			var/chosen_input = input(user, "Выбор - [lowertext(name)]:", "Настройка персонажа")  as null|anything in choice_list
 			if(!chosen_input)
 				return
 			var/choice_type = choice_list[chosen_input]
@@ -131,7 +131,7 @@
 			if(index > accessory.color_keys)
 				return
 			var/list/color_list = color_string_to_list(entry.accessory_colors)
-			var/new_color = color_pick_sanitized_lumi(user, "Choose your accessory color:", "Character Preference","[color_list[index]]")
+			var/new_color = color_pick_sanitized_lumi(user, "Выберите цвет:", "Настройка персонажа","[color_list[index]]")
 			if(!new_color)
 				return
 			color_list[index] = sanitize_hexcolor(new_color, 6, TRUE)
