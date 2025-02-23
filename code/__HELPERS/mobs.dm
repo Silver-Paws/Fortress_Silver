@@ -600,11 +600,11 @@ GLOBAL_LIST_EMPTY(species_list)
 	if(set_original_dir)
 		AM.setDir(originaldir)
 
-#define SEXUAL_PREF_HETERO "Гетеросексуальность"
-#define SEXUAL_PREF_SAME "Мужеложец/Лесбиянка"
-#define SEXUAL_PREF_BOTH "Бисексуальность"
+#define SEXUAL_PREF_HETERO "Heterosexual"
+#define SEXUAL_PREF_SAME "Homosexual"
+#define SEXUAL_PREF_BOTH "Bisexual"
 GLOBAL_LIST_INIT(sexual_prefs_list, list(
 	"Гетеросексуальность" = SEXUAL_PREF_HETERO,
-	"Мужеложество/Лесбиянство" = SEXUAL_PREF_SAME,
+	"Гомосексуальность" = SEXUAL_PREF_SAME,
 	"Бисексуальность" = SEXUAL_PREF_BOTH
 	))

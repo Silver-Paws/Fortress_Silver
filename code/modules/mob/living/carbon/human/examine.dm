@@ -645,7 +645,7 @@
 		if(E.examine_text)
 			var/new_text = replacetext(E.examine_text, "SUBJECTPRONOUN", pronoun_replacement)
 			new_text = replacetext(new_text, "ENDING", ending_replacement) //For endings in words based on gender
-			dat += "[new_text]\n" //dat.Join("\n") doesn't work here, for some reason
+			dat += "[new_text]" //dat.Join("\n") doesn't work here, for some reason
 	if(dat.len)
 		return dat.Join()
 

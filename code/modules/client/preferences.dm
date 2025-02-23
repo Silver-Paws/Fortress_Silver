@@ -724,10 +724,10 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	dat += "</td>"
 	dat += "<td width='33%' align='right'>"
-	dat += "<b style='font-size:104%'>Ориентация</b><a href='?_src_=prefs;preference=sexual_pref;task=input'>	Изменить </a><br>"
-	dat += "<b>Давать отпор?</b> <a href='?_src_=prefs;preference=be_defiant'>[(defiant) ? "Да":"Нет"]</a><br>"
-	dat += "<b>Быть девственником?</b> <a href='?_src_=prefs;preference=be_virgin'>[(virginity) ? "Да":"Нет"]</a><br>"
-	dat += "<b>Быть советчиком?</b> <a href='?_src_=prefs;preference=schizo_voice'>[(toggles & SCHIZO_VOICE) ? "Да":"Нет"]</a>"
+	dat += "<b style='font-size:104%'>[sexual_pref]</b><a href='?_src_=prefs;preference=sexual_pref;task=input'>	Изменить </a><br>"
+	dat += "<b>Be Defiant</b> <a href='?_src_=prefs;preference=be_defiant'>[(defiant) ? "Да":"Нет"]</a><br>"
+	dat += "<b>Be a virgin</b> <a href='?_src_=prefs;preference=be_virgin'>[(virginity) ? "Да":"Нет"]</a><br>"
+	dat += "<b>Be voice</b> <a href='?_src_=prefs;preference=schizo_voice'>[(toggles & SCHIZO_VOICE) ? "Да":"Нет"]</a>"
 	dat += "</td>"
 	dat += "</tr>"
 	dat += "</table>"
@@ -1740,7 +1740,6 @@ Slots: [job.spawn_positions]</span>
 					var/new_sexual_pref = input(user, "Выберите ориентацию своего персонажа", "Ориентация")  as null|anything in listy
 					if(new_sexual_pref)
 						sexual_pref = listy[new_sexual_pref]
-						to_chat(user, "<span class='notice'>Выбрана ориентация: [sexual_pref]</span>")
 
 		else
 			switch(href_list["preference"])

@@ -41,14 +41,14 @@
 	verbage = "завязывает"
 
 /datum/crafting_recipe/roguetown/spoon
-	name = "деревянные ложки (x3) - (1 полено)"
+	name = "ложки из дерева (x3) - (1 полено)"
 	result = list(/obj/item/kitchen/spoon,
 				/obj/item/kitchen/spoon,
 				/obj/item/kitchen/spoon)
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 
 /datum/crafting_recipe/roguetown/platter
-	name = "деревянные блюдца (x3) - (1 полено)"
+	name = "блюдца из дерева (x3) - (1 полено)"
 	result = list(/obj/item/cooking/platter,
 				/obj/item/cooking/platter,
 				/obj/item/cooking/platter)
@@ -114,7 +114,7 @@
 	verbage = "скручивает"
 
 /datum/crafting_recipe/roguetown/bowpartial
-	name = "ненатянутый лук - (1 полено; НОВИЧОК)"
+	name = "лук, ненатянутый - (1 полено; НОВИЧОК)"
 	result = /obj/item/grown/log/tree/bowpartial
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 	tools = list(/obj/item/rogueweapon/huntingknife)
@@ -122,7 +122,7 @@
 	verbage = "вырезает"
 
 /datum/crafting_recipe/roguetown/bow
-	name = "деревянный лук - (1 основа, 1 тетива; УЧЕНИК)"
+	name = "лук, натянутый тетивой - (1 основа, 1 тетива; УЧЕНИК)"
 	result = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 	reqs = list(/obj/item/natural/bowstring = 1, /obj/item/grown/log/tree/bowpartial = 1)
 	skillcraft = /datum/skill/combat/bows
@@ -166,7 +166,7 @@
 	skill_level = 2
 
 /datum/crafting_recipe/roguetown/woodclub
-	name = "деревянная дубина - (1 полено; НОВИЧОК)"
+	name = "дубина из дерева - (1 полено; НОВИЧОК)"
 	result = /obj/item/rogueweapon/mace/woodclub/crafted
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 
@@ -204,14 +204,14 @@
 	sellprice = 8
 
 /datum/crafting_recipe/roguetown/woodstaff
-	name = "деревянные посохи (х3) - (1 бревно; НОВИЧОК)"
+	name = "посохи из дерева (х3) - (1 бревно; НОВИЧОК)"
 	result = list(/obj/item/rogueweapon/woodstaff,
 	/obj/item/rogueweapon/woodstaff,
 	/obj/item/rogueweapon/woodstaff)
 	reqs = list(/obj/item/grown/log/tree = 1)
 
 /datum/crafting_recipe/roguetown/woodsword
-	name = "деревянные мечи (х3) - (1 полено, 1 волокно; НОВИЧОК)"
+	name = "мечи из дерева (х3) - (1 полено, 1 волокно; НОВИЧОК)"
 	result = list(/obj/item/rogueweapon/mace/wsword,
 				/obj/item/rogueweapon/mace/wsword,
 				/obj/item/rogueweapon/mace/wsword)
@@ -220,12 +220,12 @@
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/woodbucket
-	name = "деревянное ведро - (1 полено)"
+	name = "ведро из дерева - (1 полено)"
 	result = /obj/item/reagent_containers/glass/bucket/wooden
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 
 /datum/crafting_recipe/roguetown/woodcup
-	name = "деревянные кружки (x3) - (1 полено; НОВИЧОК)"
+	name = "кружки из дерева (x3) - (1 полено; НОВИЧОК)"
 	result = list(/obj/item/reagent_containers/glass/cup/wooden/crafted,
 				/obj/item/reagent_containers/glass/cup/wooden/crafted,
 				/obj/item/reagent_containers/glass/cup/wooden/crafted)
@@ -235,13 +235,13 @@
 	sellprice = 3
 
 /datum/crafting_recipe/roguetown/woodtray
-	name = "деревянные подносы (x2) - (1 полено; НОВИЧОК)"
+	name = "подносы из дерева (x2) - (1 полено; НОВИЧОК)"
 	result = list(/obj/item/storage/tray,
 				/obj/item/storage/tray)
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 
 /datum/crafting_recipe/roguetown/woodbowl
-	name = "деревянные миски (x3) - (1 полено; НОВИЧОК)"
+	name = "миски из дерева (x3) - (1 полено; НОВИЧОК)"
 	result = list(/obj/item/reagent_containers/glass/bowl,
 				/obj/item/reagent_containers/glass/bowl,
 				/obj/item/reagent_containers/glass/bowl)
@@ -391,7 +391,7 @@
 	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/pipe
-	name = "деревянная трубка - (1 палка; НОВИЧОК)"
+	name = "трубка для курения - (1 палка; НОВИЧОК)"
 	result = /obj/item/clothing/mask/cigarette/pipe/crafted
 	reqs = list(/obj/item/grown/log/tree/stick = 1)
 
@@ -410,7 +410,7 @@
 	sellprice = 8
 
 /datum/crafting_recipe/roguetown/woodspade
-	name = "деревянная лопатка - (1 полено, 1 полено; НОВИЧОК)"
+	name = "лопатка - (1 полено, 1 полено; НОВИЧОК)"
 	result = /obj/item/rogueweapon/shovel/small
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 			/obj/item/grown/log/tree/stick = 1)
@@ -427,7 +427,7 @@
 	req_table = TRUE
 
 /datum/crafting_recipe/roguetown/woodcross
-	name = "деревянный амулет - (2 волокна, 2 палки; НОВИЧОК)"
+	name = "амулет из дерева - (2 волокна, 2 палки; НОВИЧОК)"
 	result = /obj/item/clothing/neck/roguetown/psicross/wood
 	reqs = list(/obj/item/natural/fibers = 2,
 				/obj/item/grown/log/tree/stick = 2)
