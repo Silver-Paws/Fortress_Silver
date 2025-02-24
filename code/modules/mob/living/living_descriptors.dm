@@ -86,11 +86,11 @@
 	if(fourth_line)
 		lines += fourth_line
 
-	var/fifth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PENIS, MOB_DESCRIPTOR_SLOT_TESTICLES), "У %HIM% %DESC1% и %DESC2%.")
+	var/fifth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_PENIS, MOB_DESCRIPTOR_SLOT_TESTICLES), "У %HIM% %DESC1%. %DESC2%.")
 	if(fifth)
 		lines += fifth
 
-	var/sixth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_BREASTS, MOB_DESCRIPTOR_SLOT_VAGINA), "У %HIM% %DESC1% и %DESC2%.")
+	var/sixth = build_coalesce_description(desc_copy, described, list(MOB_DESCRIPTOR_SLOT_BREASTS, MOB_DESCRIPTOR_SLOT_VAGINA), "%DESC1%. %DESC2%.")
 	if(sixth)
 		lines += sixth
 

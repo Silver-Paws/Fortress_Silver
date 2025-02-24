@@ -138,7 +138,7 @@
 
 /datum/sprite_accessory/vagina
 	icon = 'icons/mob/sprite_accessory/genitals/vagina.dmi'
-	color_key_name = "Nethers"
+	color_key_name = "Цвет"
 	relevant_layers = list(BODY_FRONT_LAYER)
 
 /datum/sprite_accessory/vagina/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)

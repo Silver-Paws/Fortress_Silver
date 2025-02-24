@@ -87,19 +87,49 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/twitchy
-	name = "дёрганный"
+	name = "дёрганность"
+
+/datum/mob_descriptor/prominent/twitchy/get_description(mob/living/described)
+	if(described.gender == MALE)
+		return "дёрганный"
+	else
+		return "дёрганная"
 
 /datum/mob_descriptor/prominent/clumsy
-	name = "неуклюжий"
+	name = "неуклюжесть"
+
+/datum/mob_descriptor/prominent/clumsy/get_description(mob/living/described)
+	if(described.gender == MALE)
+		return "неуклюжий"
+	else
+		return "неуклюжа"
 
 /datum/mob_descriptor/prominent/unkempt
-	name = "неопрятный"
+	name = "неопрятный вид"
+
+/datum/mob_descriptor/prominent/unkempt/get_description(mob/living/described)
+	if(described.gender == MALE)
+		return "неопрятный"
+	else
+		return "неопрятна"
 
 /datum/mob_descriptor/prominent/tidy
-	name = "опрятный"
+	name = "опрятный вид"
+
+/datum/mob_descriptor/prominent/tidy/get_description(mob/living/described)
+	if(described.gender == MALE)
+		return "опрятный"
+	else
+		return "опрятна"
 
 /datum/mob_descriptor/prominent/eloquent
-	name = "выразительный"
+	name = "выразительный вид"
+
+/datum/mob_descriptor/prominent/eloquent/get_description(mob/living/described)
+	if(described.gender == MALE)
+		return "выразительный"
+	else
+		return "выразительна"
 
 /datum/mob_descriptor/prominent/thick_tail
 	name = "толстый хвост"
@@ -119,6 +149,12 @@
 /datum/mob_descriptor/prominent/physically_deformed
 	name = "изуродованный"
 
+/datum/mob_descriptor/prominent/physically_deformed/get_description(mob/living/described)
+	if(described.gender == MALE)
+		return "изуродованный"
+	else
+		return "изуродована"
+
 /datum/mob_descriptor/prominent/extensive_scars
 	name = "рубцованное тело"
 	verbage = "%HAVE%"
@@ -133,6 +169,9 @@
 /datum/mob_descriptor/prominent/prominent_chest
 	name = "выдающаяся грудь"
 	verbage = "%HAVE%"
+
+/datum/mob_descriptor/prominent/prominent_chest/get_description(mob/living/described)
+		return "выдающуюся грудь"
 
 /datum/mob_descriptor/prominent/prominent_bottom
 	name = "выдающийся зад"
@@ -249,7 +288,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/canine_features
-	name = "собачьи черты"
+	name = "псовые черты"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/feline_features
@@ -285,7 +324,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/marsupial_features
-	name = "черты сумчатого животного"
+	name = "сумчатые черты"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/lizard_features

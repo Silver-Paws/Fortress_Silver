@@ -1,7 +1,7 @@
 /datum/mob_descriptor/defiant
-	name = "Сопротивляться?	"
+	name = "Defiant"
 	slot = MOB_DESCRIPTOR_SLOT_NOTHING
-	verbage = "даст отпор"
+	verbage = "даст отпор,"
 	describe = "в случае посягательства на %HIM%!"
 	show_obscured = TRUE
 
@@ -27,7 +27,7 @@
 	return TRUE
 
 /datum/mob_descriptor/age
-	name = "Возраст"
+	name = "Age"
 	slot = MOB_DESCRIPTOR_SLOT_AGE
 	verbage = "выглядит"
 
@@ -46,13 +46,10 @@
 	else if (human.age == AGE_MIDDLEAGED)
 		if(described.gender == MALE)
 			return "зрелым"
-		else
+		else 
 			return "зрелой"
 	else
-		if(described.gender == MALE)
-			return "молодо"
-		else
-			return "молодая"
+		return "молодо"
 
 	if(described.gender == MALE)
 		return "%MAN%"
@@ -75,6 +72,9 @@
 	if(!get_location_accessible(human, BODY_ZONE_PRECISE_GROIN))
 		return FALSE
 	return TRUE
+
+/datum/mob_descriptor/testicles/get_standalone_text(mob/living/described)
+	return "У %HIM% [get_coalesce_text(described)]."
 
 /datum/mob_descriptor/penis/get_description(mob/living/described)
 	var/mob/living/carbon/human/human = described
@@ -106,7 +106,7 @@
 /datum/mob_descriptor/testicles
 	name = "яйца"
 	slot = MOB_DESCRIPTOR_SLOT_TESTICLES
-	verbage = "видны"
+	verbage = "Видны"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/testicles/can_describe(mob/living/described)
@@ -121,6 +121,9 @@
 	if(!testes.visible_organ)
 		return FALSE
 	return TRUE
+
+/datum/mob_descriptor/testicles/get_standalone_text(mob/living/described)
+	return "[get_coalesce_text(described)]."
 
 /datum/mob_descriptor/testicles/get_description(mob/living/described)
 	var/mob/living/carbon/human/human = described
@@ -138,7 +141,8 @@
 /datum/mob_descriptor/vagina
 	name = "вагина"
 	slot = MOB_DESCRIPTOR_SLOT_VAGINA
-	verbage = ""
+	verbage = "Видно"
+	prefix = "оголённую"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/vagina/can_describe(mob/living/described)
@@ -153,12 +157,31 @@
 	return TRUE
 
 /datum/mob_descriptor/vagina/get_description(mob/living/described)
-	return "вагина"
+	var/mob/living/carbon/human/human = described
+	var/obj/item/organ/vagina/vagina = human.getorganslot(ORGAN_SLOT_VAGINA)
+	var/adjective
+	switch(vagina.accessory_type)
+		if(/datum/sprite_accessory/vagina/human)
+			adjective = "гладко выбритую"
+		if(/datum/sprite_accessory/vagina/hairy)
+			adjective = "поросшую волосами"
+		if(/datum/sprite_accessory/vagina/spade)
+			adjective = "развёрстую, как лепесток"
+		if(/datum/sprite_accessory/vagina/furred)
+			adjective = "прикрытую шерстью"
+		if(/datum/sprite_accessory/vagina/gaping)
+			adjective = "она зияет!.."
+		if(/datum/sprite_accessory/vagina/cloaca)
+			adjective = "кажется, это... Клоака?.."
+	return "вагину, [adjective]"
+
+/datum/mob_descriptor/vagina/get_standalone_text(mob/living/described)
+	return "[get_coalesce_text(described)]."
 
 /datum/mob_descriptor/breasts
 	name = "груди"
 	slot = MOB_DESCRIPTOR_SLOT_BREASTS
-	verbage = ""
+	prefix = "%HIS%"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/breasts/can_describe(mob/living/described)
@@ -176,25 +199,36 @@
 	var/mob/living/carbon/human/human = described
 	var/obj/item/organ/breasts/breasts = human.getorganslot(ORGAN_SLOT_BREASTS)
 	var/adjective
+	var/adjective_count
 	switch(breasts.breast_size)
 		if(0)
-			adjective = "Плоские"
+			adjective = "плоского"
 		if(1)
-			adjective = "Небольшие"
+			adjective = "небольшого"
 		if(2)
-			adjective = "Маленькие"
+			adjective = "маленького"
 		if(3)
-			adjective = "Средние"
+			adjective = "среднего"
 		if(4)
-			adjective = "Большие"
+			adjective = "большого"
 		if(5)
-			adjective = "Огромные"
-	return "[adjective] груди"
+			adjective = "огромного"
+	switch(breasts.accessory_type)
+		if(/datum/sprite_accessory/breasts/pair)
+			adjective_count = "грудь"
+		if(/datum/sprite_accessory/breasts/quad)
+			adjective_count = "две пары грудей"
+		if(/datum/sprite_accessory/breasts/sextuple)
+			adjective_count = "три пары грудей"
+	return "[adjective_count] [adjective] размера"
+
+/datum/mob_descriptor/breasts/get_standalone_text(mob/living/described)
+	return "[get_coalesce_text(described)]."
 
 /datum/mob_descriptor/sexual
-	name = "Сексуальные пристрастия"
+	name = "Sexual preferences"
 	slot = MOB_DESCRIPTOR_SLOT_NOTHING
-	verbage = "предпочитает, судя по всему,"
+	verbage = "предпочтениях, судя по всему,"
 
 /datum/mob_descriptor/sexual/can_describe(mob/living/described)
 	if(!ishuman(described))
@@ -208,4 +242,7 @@
 	else if (human.client.prefs.sexual_pref == SEXUAL_PREF_SAME)
 		return "%HIS% собственный пол"
 	else
-		return "и женщин, и мужчин"
+		return "оба пола"
+
+/datum/mob_descriptor/sexual/get_standalone_text(mob/living/described)
+	return "В %HIS% [get_coalesce_text(described)]."
