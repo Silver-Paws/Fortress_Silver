@@ -1,13 +1,13 @@
 /datum/special_trait/nothing
-	name = "Nothing"
-	greet_text = span_notice("You get <b>NOTHING</b>! you <b>LOSE</b>! Good dae, Sire!")
+	name = "Ничего!"
+	greet_text = span_notice("Вы получите <b>НИЧТО</b>! Вы <b>ПРОИГРАЛИ</b>! До свидания, сэр!")
 	weight = 10
 
 
 // Positive Specials
 /datum/special_trait/tough
-	name = "Tough"
-	greet_text = span_notice("Father always said - The best defence is a good offence... Until mother knocked some sense into him with a rolling pin, that is. Momma was always a great teacher.")
+	name = "Крепкий"
+	greet_text = span_notice("Отец всегда говорил - лучшая защита это нападение... Ну, пока это не мама, вбивающая ему мозги скалкой, оно так и есть. Мама всегда отлично учила меня.")
 	weight = 80
 
 /datum/special_trait/tough/on_apply(mob/living/carbon/human/character, silent)
@@ -15,8 +15,8 @@
 
 
 /datum/special_trait/alert
-	name = "Alert"
-	greet_text = span_notice("Those cheap tricks? I've seen it all and then some more. Nobody- No... <b>Nothing</b> can surprise me.")
+	name = "Настороже"
+	greet_text = span_notice("Эти-то дешёвые трюки? Все из них я повидал и даже больше. Никт-... Нет... <b>Ничто</b> меня не удивит.")
 	weight = 100
 
 /datum/special_trait/alert/on_apply(mob/living/carbon/human/character, silent)
@@ -25,8 +25,8 @@
 
 
 /datum/special_trait/aboriginal
-	name = "Aboriginal Roots"
-	greet_text = span_notice("My distant ancestors had to cope with Enigma's hardships long before colonization, the lack of need to eat or breathe is my family's most guarded secret. Some dare call it inhumen magic, I'd prefer \"Taming the land\".")
+	name = "Корни Аборигена"
+	greet_text = span_notice("Мои далёкие предки боролись с бедами Энигмы задолго до колонизации острова, то что нет нужды есть или дышать – самый охраняемый секрет моей семьи. Кто-то смеет называть это чёрной магией. Я же предпочту \"Приручением земель\"..")
 	restricted_jobs = list(INQUISITION_ROLES)
 	weight = 80
 
@@ -37,8 +37,8 @@
 
 
 /datum/special_trait/desensitized
-	name = "Desensitized"
-	greet_text = span_notice("Living in a shithole such as this sad island really builds character, no?")
+	name = "Обесчувствленный"
+	greet_text = span_notice("Жизнь в дыре вроде этого заунывного острова может взаправду закостенеть характер, ага?")
 	weight = 100
 
 /datum/special_trait/desensitized/on_apply(mob/living/carbon/human/character, silent)
@@ -47,8 +47,8 @@
 
 
 /datum/special_trait/scrooge
-	name = "Scrooge"
-	greet_text = span_notice("Mammon runs Enigma and <b>I</b> happen to be one of the lucky ones who know how mammon <b>really</b> works. I always store my mammon in the safest of places.")
+	name = "Скряга"
+	greet_text = span_notice("Маммоны правят Энигмой и <b>Я</b> тот счастливчик, который ведает <b>реальную</b> работу денег. Я всегда храню свои маммоны в безопаснейшем месте.")
 	weight = 80
 
 /datum/special_trait/scrooge/on_apply(mob/living/carbon/human/character, silent)
@@ -60,8 +60,8 @@
 
 
 /datum/special_trait/assassin
-	name = "Apprentice Assassin"
-	greet_text = span_notice("I've always been an outlier. Even from a young age, socialite activities weren't for me. Be it fate or luck - I ended up in the ranks of one of the many assassin guilds that poliferate this rotten world.")
+	name = "Ассассин-Ученик"
+	greet_text = span_notice("Я всегда держался в сторонке. Даже измалку, работа в обществе была не для меня. Судьба или удача - по итогу я оказался в рядах одной из многочисленной гильдий убийц, что наводняют этот прогнивший мир.")
 	weight = 40
 
 /datum/special_trait/assassin/on_apply(mob/living/carbon/human/character, silent)
@@ -75,8 +75,8 @@
 
 
 /datum/special_trait/lightfooted
-	name = "Lightfooted"
-	greet_text = span_notice("I've always been light on my feet. Sneaking around quietly and quickly has never been a problem for me.")
+	name = "Проворный"
+	greet_text = span_notice("Мой шаг всегда был лёгким. Красться без звука и промедления никогда не было мне вызовом.")
 	weight = 60
 
 /datum/special_trait/lightfooted/on_apply(mob/living/carbon/human/character, silent)
@@ -86,8 +86,8 @@
 
 
 /datum/special_trait/night_owl
-	name = "Night Owl"
-	greet_text = span_notice("I've always preferred Noc over her sister.")
+	name = "Сова"
+	greet_text = span_notice("Я всегда предпочитал Нок, а не её сестру.")
 	weight = 100
 
 /datum/special_trait/night_owl/on_apply(mob/living/carbon/human/character, silent)
@@ -95,8 +95,8 @@
 
 
 /datum/special_trait/beautiful
-	name = "Beautiful"
-	greet_text = span_notice("My face is a work of art.")
+	name = "Прекрасный"
+	greet_text = span_notice("Моё лицо - произведение искусства.")
 	weight = 100
 
 /datum/special_trait/beautiful/on_apply(mob/living/carbon/human/character, silent)
@@ -104,9 +104,9 @@
 
 
 /datum/special_trait/duelist
-	name = "Ambitious Swordsman"
-	greet_text = span_notice("I've traveled from land to land for months, treaded over countless corpses; challenged tyrants and heroes alike, slain entire retinues and inhumen warbands, yet I still stand. Perhaps a worthy opponent lives here, on Enigma...? Mmmaybe I could use a little break, though...")
-	weight = 10
+	name = "Амбициозный Мечник"
+	greet_text = span_notice("Я путешествовал от страны к стране месяцами, переступив через бесчисленное множество трупов; испытывал и тиранов, и героев, сражал свиты телохранителей и банды нелюдей, и всё ещё жив. Может, достойный противник будет здесь, на Энигме?... Мо-о-ожет я и отдохнул бы чуть-чуть, впрочем...")
+	weight = 10 
 
 /datum/special_trait/duelist/on_apply(mob/living/carbon/human/character, silent)
 	character.cmode_music = 'sound/music/combat_duelist.ogg'
@@ -117,33 +117,33 @@
 	switch(rand(1,100))
 		if(1 to 24)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/sword
-			to_chat(character, span_notice("That old piece of junk... I think I left it in a tree?..."))
+			to_chat(character, span_notice("Этот кусок металлолома... Кажется, я оставил его в дереве?..."))
 		if(25 to 44)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/sword/rapier
-			to_chat(character, span_notice("Where did I put that damned thing again? Right, the woods..,"))
+			to_chat(character, span_notice("Где я забыл этот чёртов меч? Точно, лес..."))
 		if(45 to 60)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/sword/long
-			to_chat(character, span_notice("I need to get my sword from that tree."))
+			to_chat(character, span_notice("Мне нужно достать свой меч из того дерева."))
 		if(61 to 74)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/sword/long/heirloom
-			to_chat(character, span_notice("Shit. I'm going to shame my entire bloodline if I really lost that thing. Wait... Right! The tree!"))
+			to_chat(character, span_notice("Зизо побери... Я в самом деле опозорю свой род, если потеряю его. Минуту... Точно! Дерево!"))
 		if(75 to 85)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/greatsword/zwei
-			to_chat(character, span_notice("There is just no way I lost a fucking zweihander. I should check that tree I slept in."))
+			to_chat(character, span_notice("Ну не может быть что я потерял ХЕРОВ ц	вайхендер! Я должен проверить то дерево, на котором спал."))
 		if(86 to 93)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/estoc
-			to_chat(character, span_notice("Well... Stabbing through plate might be a challenge without that estoc... Where did I leave it..."))
+			to_chat(character, span_notice("Ну... Пробиваться сквозь латы может оказаться трудным без того эстока... Где же я его оставил..."))
 		if(94 to 97)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/sword/long/vlord
-			to_chat(character, span_notice("Hmmm... Didn't I kill that annoying deadite two weeks ago...?"))
+			to_chat(character, span_notice("Хм-м-м... Я же прибил ту надоедливую нежить двумя неделями раньше, так?..."))
 		if(98 to 100)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/sword/long/judgement
-			to_chat(character, span_notice("In that tree."))
+			to_chat(character, span_notice("В том самом дереве."))
 
 
 /datum/special_trait/eagle_eyed
-	name = "Eagle Eyed"
-	greet_text = span_notice("I'd like to see them fire that obnoxiously loud stick with a bolt through their skull. I don't miss.")
+	name = "Орлиный Глаз"
+	greet_text = span_notice("Хотел бы я видеть, как эти стрелки с их до противного громкими \"палками\" постреляют с болтом промеж глаз. Я то не промахиваюсь.")
 	weight = 10
 
 /datum/special_trait/eagle_eyed/on_apply(mob/living/carbon/human/character, silent)
@@ -155,8 +155,8 @@
 
 
 /datum/special_trait/seduction_artist
-	name = "Seduction Artist"
-	greet_text = span_notice("I learned to wrap weak willed people around my finger through sex-appeal! I also picked up a few words from my last partner's language!")
+	name = "Маэстро Соблазнения"
+	greet_text = span_notice("Я научился обводить слабовольных людей вокруг своего пальца, благодаря моему привлекательному телу! Ещё я выучил пару словечек из языка моего последнего любовника!")
 	weight = 100
 
 /datum/special_trait/seduction_artist/on_apply(mob/living/carbon/human/character, silent)
@@ -178,8 +178,8 @@
 
 
 /datum/special_trait/corn_fed
-	name = "Corn Fed"
-	greet_text = span_notice("My diet was quite rich in corn.")
+	name = "Вскормленный Кукурузой"
+	greet_text = span_notice("В моём рационе было много кукурузы.")
 	weight = 100
 
 /datum/special_trait/corn_fed/on_apply(mob/living/carbon/human/character, silent)
@@ -188,8 +188,8 @@
 
 
 /datum/special_trait/bookworm
-	name = "Bookworm"
-	greet_text = span_notice("I'm a fan of books and I enjoy reading them regularly.")
+	name = "Книжный червь"
+	greet_text = span_notice("Я обожаю книги и люблю скрасить досуг их регулярным чтением.")
 	weight = 100
 
 /datum/special_trait/bookworm/on_apply(mob/living/carbon/human/character, silent)
@@ -198,8 +198,8 @@
 
 
 /datum/special_trait/arsonist
-	name = "Arsonist"
-	greet_text = span_notice("I like seeing things combust and burn. I have a stash of firebombs!")
+	name = "Поджигатель"
+	greet_text = span_notice("Мне мило видеть горение и воспламенение вещей. У меня даже есть схрон огненных бомб!")
 	weight = 100
 
 /datum/special_trait/arsonist/on_apply(mob/living/carbon/human/character, silent)
@@ -208,8 +208,8 @@
 
 
 /datum/special_trait/pineapple
-	name = "The safeword is 'Pineapple'"
-	greet_text = span_notice("I enjoy whipping people until they squirm and whine, their pain makes my pleasure. I'll need to grab my toy from that one tree.")
+	name = "Стоп Слово: 'Ананас'"
+	greet_text = span_notice("Я наслаждаюсь поркой, аж пока люди не заскулят и не будут извиваться телом, их боль - моё удовольствие. Надо бы забрать мою игрушку с того дерева...")
 	weight = 10
 
 /datum/special_trait/pineapple/on_apply(mob/living/carbon/human/character, silent)
@@ -218,9 +218,9 @@
 
 
 /datum/special_trait/psydons_rider
-	name = "Psydon's Drunkest Rider"
-	greet_text = span_notice("I ride! None shall stop me for that is Psydon's divine will!")
-	req_text = "Worship Psydon"
+	name = "Псайдонов Пьянчужный Всадник"
+	greet_text = span_notice("Я скачу! Никто не остановит меня, ибо есть то воля божественная самого Псайдона!")
+	req_text = "Верить в Псайдона"
 	allowed_patrons = list(/datum/patron/psydon)
 	weight = 100
 
@@ -234,8 +234,8 @@
 
 
 /datum/special_trait/packed_lunch
-	name = "Packed Lunch"
-	greet_text = span_notice("I don't like going around hungry so I packed my lunch!")
+	name = "Запасённый Перекус"
+	greet_text = span_notice("Не люблю ходить голодным, так что я припас себе перекус!")
 	weight = 100
 
 /datum/special_trait/packed_lunch/on_apply(mob/living/carbon/human/character, silent)
@@ -245,9 +245,9 @@
 
 
 /datum/special_trait/freerunner
-	name = "Freerunner"
-	greet_text = span_notice("I've been jumping across Rockhill roofs since I was a little brat, the adrenaline of leaving the entire retinue scratching their heads and raging at their inability to catch me never gets old. I think some of them still hold a grudge.")
-	req_text = "Adult or Middle-Aged, Non-keep role."
+	name = "Беглец"
+	greet_text = span_notice("Я прыгал по крышам Рокхилла ещё когда был мелким засранцем, адреналин побега от всей герцогской свиты, лишь чешущей затылок в неспособности поймать меня, непередаваем. Думаю, некоторые из них все ещё точат зуб на меня.")
+	req_text = "Возраст: Adult или Middle-Aged; не замковая роль."
 	restricted_jobs = list(KING_QUEEN_ROLES, GARRISON_ROLES, MANOR_ROLES)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	weight = 10
@@ -260,8 +260,8 @@
 
 
 /datum/special_trait/thief
-	name = "Thief"
-	greet_text = span_notice("Life's not easy around here, but I've made mine a little easier by taking things of others")
+	name = "Вор"
+	greet_text = span_notice("Жизнь тут непроста, но свою я умудрился сделать легче, забирая у других.")
 	weight = 100
 
 /datum/special_trait/thief/on_apply(mob/living/carbon/human/character, silent)
@@ -272,8 +272,8 @@
 
 
 /datum/special_trait/polyglot
-	name = "Polyglot"
-	greet_text = span_notice("I have always picked up on languages easily, even those that are forbidden to mortals.")
+	name = "Полиглот"
+	greet_text = span_notice("Языки мне всегда давались легко, даже те что запретны для смертных.")
 	weight = 100
 
 /datum/special_trait/polyglot/on_apply(mob/living/carbon/human/character, silent)
@@ -288,8 +288,8 @@
 
 
 /datum/special_trait/tavernbrawler
-	name = "Tavern Brawler"
-	greet_text = span_notice("I am <b>not</b> an aggressive drunk! Who the hell is spouting slander about me? I'm going over there to show them what's up! ... Oh? What?... You want some too?!")
+	name = "Трактирный Буян"
+	greet_text = span_notice("Я <b>НЕ</b> агрессивный пьяница! Кто к зизовой матери клевещет обо мне? Сейчас я как покажу им! ... А? Чего-чего?... Тебе тоже хочется?!")
 	weight = 20 // Seems very strong, someone said they punched thru blacksteel plate as 14 STR acolyte expert unarmed with 5 punches? But since when do punches damage armor at all?
 
 /datum/special_trait/tavernbrawler/on_apply(mob/living/carbon/human/character, silent)
@@ -297,8 +297,8 @@
 
 
 /datum/special_trait/jack_of_all_trades
-	name = "John of Most Trades" // that 'master craftsman' couldn't ever even /hope/ to lick a Master's boots, leave!
-	greet_text = span_notice("In my youth, I've decided I'd try a little bit of everything, I turned out quite the versatile craftsman, if I do say so myself.")
+	name = "На Все Руки Мастер" // that 'master craftsman' couldn't ever even /hope/ to lick a Master's boots, leave!
+	greet_text = span_notice("В молодости я решил, что попробую всего понемножку, и теперь я гибкий ремесленик, если можно себя так назвать.")
 	weight = 80
 
 /datum/special_trait/jack_of_all_trades/on_apply(mob/living/carbon/human/character)
@@ -312,9 +312,9 @@
 
 
 /datum/special_trait/true_jack_of_all_trades
-	name = "Jack of All Trades"
-	greet_text = span_notice("In my youth, I've decided I'd try a little bit of everything, I turned out quite the versatile cr- woaahhh.. Deja vu...")
-	req_text = "Middle-Aged or Old"
+	name = "И Швец, и Жнец, и на Дуде Игрец"
+	greet_text = span_notice("В молодости я решил, что попробую всего понемножку, и теперь я гибкий реме-... Во-о-оу... Дежа-вю...")
+	req_text = "Возраст: Middle-Aged или Old"
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	weight = 60
 
@@ -333,8 +333,8 @@
 
 
 /datum/special_trait/noble
-	name = "Noble Lineage"
-	greet_text = span_notice("I've been born with, or have been granted nobility.")
+	name = "Знатная Родословная"
+	greet_text = span_notice("Я или родился знатным, или мне её даровали.")
 	restricted_traits = list(TRAIT_NOBLE)
 	weight = 100
 
@@ -344,8 +344,8 @@
 
 
 /datum/special_trait/swift
-	name = "Speedster"
-	greet_text = span_notice("I feel like the fastest person alive and I can probably dodge anything, as long as I'm not weighed down by bulky armor.")
+	name = "Скороход"
+	greet_text = span_notice("Я быстр как никто иной в этом мире и уклонюсь от чего угодно! Пока меня не сковывает громоздкая броня, разумеется.")
 	weight = 40
 
 /datum/special_trait/swift/on_apply(mob/living/carbon/human/character, silent)
@@ -356,8 +356,8 @@
 
 
 /datum/special_trait/gourmand
-	name = "Gourmand"
-	greet_text = span_notice("These ignorant fools could never even dream to rival my refined palate. Food is for eating and that's just what I'll do.")
+	name = "Гурман"
+	greet_text = span_notice("Эти невежественные недотёпы даже и мечтать не могли бы соревноваться с моим утончённым вкусом. Еда - для приёма пищи и это то, чем я буду заниматься.")
 	weight = 100
 
 /datum/special_trait/gourmand/on_apply(mob/living/carbon/human/character, silent)
@@ -365,8 +365,8 @@
 
 
 /datum/special_trait/lucky
-	name = "Lucky"
-	greet_text = span_notice("I feel like the luckiest person alive! Misfortune trembles as I pass her by on a dae to dae basis!")
+	name = "Счастливчик"
+	greet_text = span_notice("Я ощущаю себя самым удачливым на свете! Беды меркнут, как я прохожу мимо них от дня к дню на рутинной основе!")
 	weight = 10
 
 /datum/special_trait/lucky/on_apply(mob/living/carbon/human/character, silent)
@@ -374,8 +374,8 @@
 
 
 /datum/special_trait/mule
-	name = "Mule"
-	greet_text = span_notice("I've been running errands for the Nightmaster, recently I've gotten my hands on an interesting little thing, I stashed that thing. Perhaps I should consider going independent...")
+	name = "Наркокурьер"
+	greet_text = span_notice("Я выполнял поручения Сутенёра, недавно прибрал к рукам кое-какую интересную вещицу, и спрятал её. Может быть, пришла пора подумать о своём независимом бизнесе...")
 	weight = 100
 
 /datum/special_trait/mule/on_apply(mob/living/carbon/human/character, silent)
@@ -385,8 +385,8 @@
 	character.mind.adjust_skillrank_up_to(/datum/skill/combat/knives, 2, TRUE)
 
 /datum/special_trait/plate_trained
-	name = "Plate Trained"
-	greet_text = span_notice("I've made friends with a knight in the past, they have taught me how to feel comfortable in even the heaviest kinds of armor.")
+	name = "Умелый Латник"
+	greet_text = span_notice("В прошлом у меня был друг-рыцарь, что научил меня комфортно двигаться даже в самых громоздких латах.")
 	restricted_traits = list(TRAIT_HEAVYARMOR)
 	weight = 20
 
@@ -395,8 +395,8 @@
 
 
 /datum/special_trait/maile_trained
-	name = "Maile Trained"
-	greet_text = span_notice("I've known a guy, he knew how to run maile, so I asked him to teach me.")
+	name = "Умелый Кольчужник"
+	greet_text = span_notice("Знавал парня, он знал как носить кольчатую броню, ну и я попросил научить меня тоже.")
 	restricted_traits = list(TRAIT_MEDIUMARMOR)
 	weight = 40
 
@@ -404,9 +404,9 @@
 	ADD_TRAIT(character, TRAIT_MEDIUMARMOR, "[type]")
 
 /datum/special_trait/graggar_champion
-	name = "Graggar's Little Champ"
-	greet_text = span_notice("A life of devotion to Graggar has taught me how to chew through flesh and bone alike with ease.")
-	req_text = "Worship Graggar"
+	name = "Граггаров Славный Малый"
+	greet_text = span_notice("Посвящённая Граггару жизнь научила меня слёгкостью прокусывать и плоть, и кости.")
+	req_text = "Верить в Граггара"
 	allowed_patrons = list(/datum/patron/inhumen/graggar)
 	weight = 40
 
@@ -416,9 +416,9 @@
 
 // Neutral Specials
 /datum/special_trait/giant // Arguable if this is neutral anyway, think nobody dislikes getting it.
-	name = "Giant"
-	greet_text = span_notice("I've always been called a giant. I am valued for my stature, but, this world made for smaller folk has forced me to move cautiously.")
-	req_text = "Not a kobold, seelie, verminvolk or a dwarf" // 1984
+	name = "Гигант"
+	greet_text = span_notice("Меня всегда называли гигантом. Я ценим за своё телосложение, но, этот мир маленьких существ заставил меня учиться быть осторожным.")
+	req_text = "Не быть: кобольдом, феей, верминволком или дворфом" // 1984
 	restricted_races = list(/datum/species/anthromorphsmall, /datum/species/dwarf/mountain, /datum/species/kobold, /datum/species/seelie)
 	weight = 60
 
@@ -433,9 +433,9 @@
 
 
 /datum/special_trait/atheism
-	name = "Atheist"
-	greet_text = span_notice("God is dead.")
-	req_text = "Non-Church Role"
+	name = "Атеист"
+	greet_text = span_notice("Бог мёртв.")
+	req_text = "Нецерковные роли"
 	restricted_jobs = list(CHURCH_ROLES, INQUISITION_ROLES)
 	weight = 100
 
@@ -444,8 +444,8 @@
 
 
 /datum/special_trait/disfigured
-	name = "Disfigured"
-	greet_text = span_notice("For better or worse, my face has been fucked up beyond recognition for quite a long while now.")
+	name = "Обезображенный"
+	greet_text = span_notice("К лучшему или худшему, моё лицо давно расхреначено к зизовой матери, что и не узнать теперь.")
 	weight = 80
 
 /datum/special_trait/disfigured/on_apply(mob/living/carbon/human/character, silent)
@@ -454,8 +454,8 @@
 
 //Negative Specials
 /datum/special_trait/nimrod
-	name = "Nimrod"
-	greet_text = span_boldwarning("In the past I learned slower than my peers, I can't even lace my shoes.")
+	name = "Нимрод"
+	greet_text = span_boldwarning("Я познавал всё хуже, чем сверстники... Да я даже шнурки не завяжу сам...")
 	weight = 80
 
 /datum/special_trait/nimrod/on_apply(mob/living/carbon/human/character, silent)
@@ -464,9 +464,9 @@
 
 
 /datum/special_trait/heretic
-	name = "Known Heretic"
-	greet_text = span_boldwarning("I've been denounced by the church for either reasons legitimate or not!")
-	req_text = "Non-Church role"
+	name = "Признанный Еретиком"
+	greet_text = span_boldwarning("Меня отлучили от церкви, за дело или нет!")
+	req_text = "Нецерковные роли"
 	weight = 100
 	restricted_jobs = list(CHURCH_ROLES, INQUISITION_ROLES)
 
@@ -477,8 +477,8 @@
 
 
 /datum/special_trait/hunted
-	name = "Hunted"
-	greet_text = span_boldwarning("Someone put a bounty on my head!")
+	name = "Разыскиваемый"
+	greet_text = span_boldwarning("Кто-то выставил за мою голову награду!")
 	weight = 100
 
 /datum/special_trait/hunted/on_apply(mob/living/carbon/human/character, silent)
@@ -490,34 +490,34 @@
 	else
 		employer_gender = FEMALE
 	if(employer_gender == MALE)
-		employer = pick(list("Baron", "Lord", "Nobleman", "Heir"))
+		employer = pick(list("Барон", "Лорд", "Дворянин", "Наследник"))
 	else
-		employer = pick(list("Duchess", "Lady", "Noblelady", "Heiress"))
+		employer = pick(list("Герцогиня", "Леди", "Дворянка", "Наследница"))
 	employer = "[employer] [random_human_name(employer_gender, FALSE, FALSE)]"
 	var/amount = rand(40,100)
 	switch(rand(1,7))
 		if(1)
-			reason = "Murder"
+			reason = "убийство"
 		if(2)
-			reason = "Kinslaying"
+			reason = "цареубийство"
 		if(3)
-			reason = "Besmirching a Noble's name"
+			reason = "позор на дворянский род"
 		if(4)
-			reason = "Treason"
+			reason = "предательство"
 		if(5)
-			reason = "Arson"
+			reason = "поджог"
 		if(6)
-			reason = "Heresy"
+			reason = "ересь"
 		if(7)
-			reason = "Robbing a Noble"
+			reason = "ограбление дворянина"
 	add_bounty(character.real_name, amount, FALSE, reason, employer)
 	if(!silent)
-		to_chat(character, span_notice("Whether I've done it or not, I have been accused of [reason] and the [employer] put a bounty on my head!"))
+		to_chat(character, span_notice("Делал я это или нет, я обвинён в том, что совершил [reason] and the [employer] put a bounty on my head!"))
 
 
 /datum/special_trait/outlaw
-	name = "Known Outlaw"
-	greet_text = span_boldwarning("Whether for crimes I've done or was accused of, I have been declared an outlaw!")
+	name = "Признанный Преступником"
+	greet_text = span_boldwarning("По делу я был обвинён в преступлениях или ложно, меня объявили вне закона!")
 	weight = 100
 
 /datum/special_trait/outlaw/on_apply(mob/living/carbon/human/character, silent)
@@ -525,8 +525,8 @@
 
 
 /datum/special_trait/unlucky
-	name = "Unlucky"
-	greet_text = span_boldwarning("Ever since I knocked over that glass vase, I just feel... off.")
+	name = "Неудачник"
+	greet_text = span_boldwarning("С тех пор как уронил ту стеклянную вазу, я будто не в своей тарелке...")
 	weight = 60
 
 /datum/special_trait/unlucky/on_apply(mob/living/carbon/human/character, silent)
@@ -534,8 +534,8 @@
 
 
 /datum/special_trait/jesterphobia
-	name = "Jesterphobic"
-	greet_text = span_boldwarning("I have a severe, irrational fear of Jesters!")
+	name = "Шутофобия"
+	greet_text = span_boldwarning("У меня сильный, неразумный страх от шутов!")
 	weight = 80
 
 /datum/special_trait/jesterphobia/on_apply(mob/living/carbon/human/character, silent)
@@ -543,8 +543,8 @@
 
 
 /datum/special_trait/wild_night
-	name = "Wild Night"
-	greet_text = span_boldwarning("I don't remember what I did last night, and now I'm lost!")
+	name = "Дикая Ночка"
+	greet_text = span_boldwarning("Не помню что делал прошлой ночью, и теперь я не пойми где!")
 	weight = 100
 
 /datum/special_trait/wild_night/on_apply(mob/living/carbon/human/character, silent)
@@ -554,8 +554,8 @@
 
 
 /datum/special_trait/atrophy
-	name = "Atrophy"
-	greet_text = span_boldwarning("When growing up I could barely feed myself, this left me weak and fragile...")
+	name = "Атрофия"
+	greet_text = span_boldwarning("Когда я только взрослел, я едва мог прокормиться, благодаря чему вырос слабым и хрупким...")
 	weight = 80
 
 /datum/special_trait/atrophy/on_apply(mob/living/carbon/human/character)
@@ -565,8 +565,8 @@
 
 
 /datum/special_trait/lazy
-	name = "Lazy"
-	greet_text = span_boldwarning("I don't care, never did.")
+	name = "Ленивый"
+	greet_text = span_boldwarning("Мне всегда было всё по барабану.")
 	weight = 80
 
 /datum/special_trait/lazy/on_apply(mob/living/carbon/human/character)
@@ -578,8 +578,8 @@
 
 
 /datum/special_trait/bad_week
-	name = "Bad Week"
-	greet_text = span_boldwarning("Everything just seems to piss me off!")
+	name = "Не с Той Ноги"
+	greet_text = span_boldwarning("Меня этим дэцом всё просто бесит!")
 	weight = 100
 
 /datum/special_trait/bad_week/on_apply(mob/living/carbon/human/character, silent)
@@ -587,8 +587,8 @@
 
 
 /datum/special_trait/nude_sleeper
-	name = "Nude Sleeper"
-	greet_text = span_boldwarning("I just can't seem to fall asleep unless I'm <i>truly</i> comfortable...")
+	name = "Нагой Соня"
+	greet_text = span_boldwarning("Мне сложно уснуть, пока я не достигну <i>реального</i> комфорта...")
 	weight = 100
 
 /datum/special_trait/nude_sleeper/on_apply(mob/living/carbon/human/character, silent)
@@ -596,8 +596,8 @@
 
 
 /datum/special_trait/annoying
-	name = "Annoying"
-	greet_text = span_boldwarning("People just don't seem to like me... I want to cry...")
+	name = "Надоедливый"
+	greet_text = span_boldwarning("Люди, кажется, меня просто не любит... Мне хочется плакать...")
 	weight = 80
 
 /datum/special_trait/annoying/on_apply(mob/living/carbon/human/character, silent)
@@ -606,8 +606,8 @@
 
 
 /datum/special_trait/missing_nose
-	name = "Missing Nose"
-	greet_text = span_boldwarning("I lost my nose in combat. This makes breathing difficult.")
+	name = "Безносый"
+	greet_text = span_boldwarning("Я потерял нос в бою. Из-за этого трудно дышать.")
 	weight = 40
 
 /datum/special_trait/missing_nose/on_apply(mob/living/carbon/human/character, silent)
@@ -615,8 +615,8 @@
 
 
 /datum/special_trait/frail
-	name = "Frail"
-	greet_text = span_boldwarning("My bones and flesh seem exceptionally fragile...")
+	name = "Хрупкий"
+	greet_text = span_boldwarning("Мои плоть и кости ощущаются чрезмерно хрупкими...")
 	weight = 60
 
 /datum/special_trait/frail/on_apply(mob/living/carbon/human/character, silent)
@@ -624,8 +624,8 @@
 
 
 /datum/special_trait/leper
-	name = "Leper"
-	greet_text = span_boldwarning("I'm a disgusting leper...")
+	name = "Прокажённый"
+	greet_text = span_boldwarning("Я отвратный прокажённый...")
 	weight = 10
 
 /datum/special_trait/leper/on_apply(mob/living/carbon/human/character, silent)
@@ -634,9 +634,9 @@
 
 // Job Specials
 /datum/special_trait/my_precious
-	name = "My Precious"
-	greet_text = span_notice("The ring, it's so shiny.. so valuable, I can feel it's power. It's all mine!")
-	req_text = "Be a beggar"
+	name = "Моя Прелесть"
+	greet_text = span_notice("Прелесть, такая блестящая... Такая ценная, я чую её силу. Она моя!")
+	req_text = "Быть: beggar"
 	allowed_jobs = list(/datum/job/roguetown/beggar)
 	weight = 40
 
@@ -650,14 +650,14 @@
 	QDEL_NULL(character.shoes)
 	QDEL_NULL(character.head)
 	var/obj/item/ring = new /obj/item/clothing/ring/dragon_ring(get_turf(character))
-	ring.desc = "The name of [character.real_name] can be seen engraved on ring's inner side."
+	ring.desc = "Имя [character.real_name] видно выгравированным на внутренней стороне кольца."
 	character.put_in_hands(ring, forced = TRUE)
 
 
 /datum/special_trait/illicit_merchant
-	name = "Illicit Merchant"
-	greet_text = span_notice("I'm sick of working as an underling, I will start my own trade emporium. I've got my hands on a hidden merchant key and a curious magical device.")
-	req_text = "Be a Shophand"
+	name = "Подпольный Торговец"
+	greet_text = span_notice("Я по горло доволен работой мелкой сошки и начну вести свой собственный рынок. Я прибрал свои руки на скрытый ключ торговца и занимательное магическое устройство.")
+	req_text = "Быть: Shophand"
 	allowed_jobs = list(/datum/job/roguetown/shophand)
 	weight = 100
 
@@ -667,9 +667,9 @@
 
 
 /datum/special_trait/reps_redemption
-	name = "Reps for Redemption"
-	greet_text = span_notice("Pain has finally transformed into gain.")
-	req_text = "Be a Church Role"
+	name = "Повторения для Искупления"
+	greet_text = span_notice("Моё страдание теперь достояние.")
+	req_text = "Церковные роли или роли Инквизиции"
 	allowed_jobs = list(CHURCH_ROLES, INQUISITION_ROLES)
 	weight = 60
 
@@ -682,9 +682,9 @@
 
 
 /datum/special_trait/seed_feed
-	name = "Seed & Feed"
-	greet_text = span_notice("Armed with seeds and the unwavering belief that sharing is mandatory. Bag safely stashed, until the next seed-worthy moment arises.")
-	req_text = "Be a Druid, Soilson, Towner or Refugee."
+	name = "Семена и Корма"
+	greet_text = span_notice("Я вооружён семенами и непоколебимой верой, что нужно обязательно делиться. Моя сумка надёжно спрятана до момента следующего достойного для посева момента.")
+	req_text = "Быть: Druid, Soilson, Towner или Refugee."
 	allowed_jobs = list(/datum/job/roguetown/farmer, /datum/job/roguetown/refugee, /datum/job/roguetown/towner, /datum/job/roguetown/druid)
 	weight = 100
 
@@ -695,9 +695,9 @@
 
 
 /datum/special_trait/runic_faith
-	name = "Runic Faith"
-	greet_text = span_notice("I keep two runelocks on me at all times. Sadly I forgot to load them today.")
-	req_text = "Be a Priest or Priestess"
+	name = "Вера Рунами"
+	greet_text = span_notice("Я храню при себе два рунных пистоля, всё время. Увы, одним днём я забыл их зарядить.")
+	req_text = "Быть: Priest или Priestess"
 	allowed_jobs = list(/datum/job/roguetown/priest)
 	weight = 10
 
@@ -708,9 +708,9 @@
 
 
 /datum/special_trait/thinker
-	name = "The Thinker"
-	greet_text = span_notice("Physique, Endurance, Constitution. The trinity of what builds a great leader and an even greater kingdom... or whatever those nimrods were yapping about! <b>I cast FIREBALL!!!</b>")
-	req_text = "Ruler, worship Noc"
+	name = "Мыслитель"
+	greet_text = span_notice("Сила, выносливость, телосложение. Троица того, что воспитывает великого правителя великих королевств... Ну или о чём там мямлят эти нимроды! <b>Я колдую ОГНЕННЫЙ ШАР!!!</b>")
+	req_text = "Быть Герцогом или Герцогиней; славить и верить в Нок"
 	allowed_sexes = list(MALE)
 	allowed_patrons = list(/datum/patron/divine/noc)
 	allowed_jobs = list(/datum/job/roguetown/ruler)
@@ -729,8 +729,8 @@
 
 
 /datum/special_trait/warhorse
-	name = "Warhorse"
-	greet_text = span_notice("You think you are <b>real soldiers</b>? Kiddo, don't make me laugh! If you've seen the crap <b>I've</b> seen, you'd be pissing your pants everytime you try to sleep! What was that? 'Burnt out old fart'? How about you square up and find out, you brat!")
+	name = "Ветеран Войны"
+	greet_text = span_notice("Считаешь себя <b>реальным солдатом</b>? Пацан, не смеши меня! Проходи ты то дерьмо что <b>я</b> видел, ты бы в портки срал каждый раз перед сном! Чего-чего? 'Выгоревший старый пердун'? Как насчёт ответить за слова и выяснить, так ли это, засранец?!")
 	req_text = "Be a Veteran"
 	allowed_jobs = list(/datum/job/roguetown/veteran)
 	weight = 10
@@ -743,9 +743,9 @@
 
 
 /datum/special_trait/bailiff
-	name = "Bailiff"
-	greet_text = span_notice("Order! Order! Bailiff?! Smack his nuts!")
-	req_text = "Be a Marshal"
+	name = "Пристав"
+	greet_text = span_notice("Порядок в суде! Порядок в суде! Пристав?! Врежь ему промеж ног!")
+	req_text = "Быть: Marshal"
 	allowed_jobs = list(/datum/job/roguetown/marshal)
 	weight = 40
 

@@ -146,7 +146,7 @@
 	name = "Шипованный"
 	organ_type = /obj/item/organ/penis/barbed
 	sprite_accessories = list(
-		/datum/sprite_accessory/penis/barbknot,
+		/datum/sprite_accessory/penis/barbed,
 		)
 
 /datum/customizer_choice/organ/penis/barbed_knotted

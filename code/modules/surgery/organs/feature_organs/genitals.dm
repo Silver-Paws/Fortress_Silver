@@ -70,7 +70,7 @@
 	icon_state = "hemiknotpenis"
 
 /obj/item/organ/penis/barbed
-	name = "шипованный пенис"
+	name = "шипованный член"
 	penis_type = PENIS_TYPE_BARBED
 	sheath_type = SHEATH_TYPE_NORMAL
 	icon_state = "barbpenis"

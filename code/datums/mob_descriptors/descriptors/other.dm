@@ -73,9 +73,6 @@
 		return FALSE
 	return TRUE
 
-/datum/mob_descriptor/testicles/get_standalone_text(mob/living/described)
-	return "У %HIM% [get_coalesce_text(described)]."
-
 /datum/mob_descriptor/penis/get_description(mob/living/described)
 	var/mob/living/carbon/human/human = described
 	var/obj/item/organ/penis/penis = human.getorganslot(ORGAN_SLOT_PENIS)
@@ -87,6 +84,26 @@
 			adjective = "средний"
 		if(3)
 			adjective = "большой"
+	var/penis_type_description
+	switch(penis.accessory_type)
+		if(/datum/sprite_accessory/penis/human)
+			penis_type_description = "обыкновенный на вид"
+		if(/datum/sprite_accessory/penis/knotted || /datum/sprite_accessory/penis/knotted)
+			penis_type_description = "с узлом у основания"
+		if(/datum/sprite_accessory/penis/flared)
+			penis_type_description = "широкий в головке"
+		if(/datum/sprite_accessory/penis/tapered || /datum/sprite_accessory/penis/tapered_mammal)
+			penis_type_description = "сужающийся к кончику"
+		if(/datum/sprite_accessory/penis/hemi)
+			penis_type_description = "он двойной, фаллосы сужаются к кончику"
+		if(/datum/sprite_accessory/penis/hemiknot)
+			penis_type_description = "он двойной, фаллосы узловаты и сужаются к кончику"
+		if(/datum/sprite_accessory/penis/barbed)
+			penis_type_description = "покрытый шипами по стволу"
+		if(/datum/sprite_accessory/penis/barbknot)
+			penis_type_description = "с узлом и шипами на стволе"
+		if(/datum/sprite_accessory/penis/tentacle)
+			penis_type_description = "представляющий собой какое-то щупальце.."
 	var/used_name
 	if(penis.erect_state != ERECT_STATE_HARD && penis.sheath_type != SHEATH_TYPE_NONE)
 		switch(penis.sheath_type)
@@ -100,8 +117,11 @@
 			if(SHEATH_TYPE_SLIT)
 				used_name = "щель"
 	else
-		used_name = "[adjective] [penis.name]"
+		used_name = "[adjective] член, [penis_type_description]"
 	return "[used_name]"
+
+/datum/mob_descriptor/penis/get_standalone_text(mob/living/described)
+	return "У %HIM% [get_coalesce_text(described)]."
 
 /datum/mob_descriptor/testicles
 	name = "яйца"

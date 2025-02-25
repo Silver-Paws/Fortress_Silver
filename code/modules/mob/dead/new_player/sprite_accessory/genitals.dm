@@ -31,7 +31,7 @@
 
 /datum/sprite_accessory/penis/human
 	icon_state = "human"
-	name = "Прямой"
+	name = "Обычный"
 	color_key_defaults = list(KEY_CHEST_COLOR, KEY_CHEST_COLOR)
 
 /datum/sprite_accessory/penis/knotted
@@ -63,7 +63,7 @@
 	default_colors = list("C52828", "C52828")
 
 /datum/sprite_accessory/penis/tapered_mammal
-	icon_state = "tapered"
+	icon_state = "tapered (Ножны)"
 	name = "Сужающийся"
 	color_key_defaults = list(null, KEY_CHEST_COLOR)
 	default_colors = list("C52828", null)

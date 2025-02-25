@@ -75,7 +75,7 @@
 	prefix = ""
 
 /datum/mob_descriptor/prominent/bloodshot_eye
-	name = "налитый кровью глаз"
+	name = "налитые кровью глаза"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/baggy_eye
