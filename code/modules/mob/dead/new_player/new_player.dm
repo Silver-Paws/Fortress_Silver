@@ -166,7 +166,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 			if(ready != tready)
 				ready = tready
 				if(ready && client && client.prefs.defiant)
-					to_chat(src, span_userdanger("Remember : Defiant ERP protection is only enabled while COMBAT mode is active. AHELP if necessary."))
+					to_chat(src, span_userdanger("Помните: защита Defiant ERP работает только пока COMBAT mode активен. Используйте AHELP при надобности."))
 		//if it's post initialisation and they're trying to observe we do the needful
 		if(!SSticker.current_state < GAME_STATE_PREGAME && tready == PLAYER_READY_TO_OBSERVE)
 			ready = tready
@@ -190,11 +190,11 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 
 	if(href_list["late_join"])
 		if(!SSticker?.IsRoundInProgress())
-			to_chat(usr, span_boldwarning("The game is starting. You cannot join yet."))
+			to_chat(usr, span_boldwarning("Игра начинается. Пока нельзя присоединиться."))
 			return
 
 		if(client && client.prefs.is_active_migrant())
-			to_chat(usr, span_boldwarning("You are in the migrant queue."))
+			to_chat(usr, span_boldwarning("Вы в очереди на миграцию."))
 			return
 
 		if(href_list["late_join"] == "override")
@@ -221,7 +221,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 		if(SSticker.round_start_time)
 			if(world.time < SSticker.round_start_time + timetojoin)
 				var/ttime = round((SSticker.round_start_time + timetojoin - world.time) / 10)
-				var/list/choicez = list("Not yet.", "You cannot join yet.", "It won't work yet.", "Please be patient.", "Try again later.", "Late-joining is not yet possible.")
+				var/list/choicez = list("Ещё нет.", "Пока присоединиться нельзя.", "Пока что не сработает.", "Будьте терпеливее.", "Попробуйте позже.", "Лейт-джоин пока что невозможен.")
 				to_chat(usr, span_warning("[pick(choicez)] ([ttime])."))
 				return
 
@@ -250,11 +250,11 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 
 	if(href_list["SelectedJob"])
 		if(!SSticker?.IsRoundInProgress())
-			to_chat(usr, span_danger("The round is either not ready, or has already finished..."))
+			to_chat(usr, span_danger("Игра или не готова, или уже закончилась..."))
 			return
 
 		if(!GLOB.enter_allowed)
-			to_chat(usr, span_notice("There is a lock on entering the game!"))
+			to_chat(usr, span_notice("Наложили запрет на присоединение к игре!"))
 			return
 
 		if(SSticker.queued_players.len && !(ckey(key) in GLOB.admin_datums))
@@ -263,7 +263,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 				return
 
 		if(client && client.prefs.is_active_migrant())
-			to_chat(usr, span_boldwarning("You are in the migrant queue."))
+			to_chat(usr, span_boldwarning("Вы в очереди на миграцию."))
 			return
 
 		AttemptLateSpawn(href_list["SelectedJob"])
@@ -557,12 +557,12 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 
 
 /mob/dead/new_player/proc/LateChoices()
-	var/list/dat = list("<div class='notice' style='font-style: normal; font-size: 14px; margin-bottom: 2px; padding-bottom: 0px'>Round Duration: [DisplayTimeText(world.time - SSticker.round_start_time, 1)]</div>")
+	var/list/dat = list("<div class='notice' style='font-style: normal; font-size: 14px; margin-bottom: 2px; padding-bottom: 0px'>Длительность раунда: [DisplayTimeText(world.time - SSticker.round_start_time, 1)]</div>")
 	for(var/datum/job/prioritized_job in SSjob.prioritized_jobs)
 		if(prioritized_job.current_positions >= prioritized_job.total_positions)
 			SSjob.prioritized_jobs -= prioritized_job
 	if(client && client.prefs.defiant)
-		to_chat(src, span_userdanger("Remember : Defiant ERP protection is only enabled while COMBAT mode is active. AHELP if necessary."))
+		to_chat(src, span_userdanger("Помните: защита Defiant ERP работает только пока COMBAT mode активен. Используйте AHELP при надобности."))
 	dat += "<table><tr><td valign='top'>"
 	var/column_counter = 0
 
@@ -607,39 +607,39 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 			var/cat_name = ""
 			switch (SSjob.name_occupations[category[1]].department_flag)
 				if (NOBLEMEN)
-					cat_name = "Nobles"
+					cat_name = "Дворяне"
 				if (COURTIERS)
-					cat_name = "Courtiers"
+					cat_name = "Придворные"
 				if (GARRISON)
-					cat_name = "Garrison"
+					cat_name = "Гарнизон"
 				if (CHURCHMEN)
-					cat_name = "Churchmen"
+					cat_name = "Духовенство"
 				if (INQUISITION)
-					cat_name = "Inquisition"
+					cat_name = "Инквизиция"
 				if (YEOMEN)
-					cat_name = "Yeomen"
+					cat_name = "Йомены"
 				if (PEASANTS)
-					cat_name = "Peasants"
+					cat_name = "Простолюдины"
 				if (YOUNGFOLK)
-					cat_name = "Sidefolk"
+					cat_name = "Подручные"
 				if (MERCENARIES)
-					cat_name = "Mercenaries"
+					cat_name = "Наёмники"
 				if (FOREIGNERS)
-					cat_name = "Foreigners"
+					cat_name = "Чужаки"
 
 			dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 			dat += "<legend align='center' style='font-weight: bold; color: [cat_color]'>[cat_name]</legend>"
 			var/datum/game_mode/chaosmode/C = SSticker.mode
 			if(istype(C))
 				if(C.skeletons)
-					dat += "<a class='job command' href='byond://?src=[REF(src)];SelectedJob=skeleton'>BECOME AN EVIL SKELETON</a>"
+					dat += "<a class='job command' href='byond://?src=[REF(src)];SelectedJob=skeleton'>СТАТЬ ЗЛЫМ ОЖИВШИМ СКЕЛЕТОМ</a>"
 					dat += "</fieldset><br>"
 					column_counter++
 					if(column_counter > 0 && (column_counter % 3 == 0))
 						dat += "</td><td valign='top'>"
 					break
 				if(C.deathknightspawn)
-					dat += "<a class='job command' href='byond://?src=[REF(src)];SelectedJob=Death Knight'>JOIN THE VAMPIRE LORD AS A DEATH KNIGHT</a>"
+					dat += "<a class='job command' href='byond://?src=[REF(src)];SelectedJob=Death Knight'>ПРИМКНУТЬ К ЛОРДУ-ВАМПИРУ КАК РЫЦАРЬ СМЕРТИ</a>"
 					dat += "</fieldset><br>"
 					column_counter++
 					if(column_counter > 0 && (column_counter % 3 == 0))
@@ -666,7 +666,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 				dat += "</td><td valign='top'>"
 	dat += "</td></tr></table></center>"
 	dat += "</div></div>"
-	var/datum/browser/popup = new(src, "latechoices", "Choose Class", 720, 580)
+	var/datum/browser/popup = new(src, "latechoices", "Выберите роль", 720, 580)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.set_content(jointext(dat, ""))
 	popup.open(FALSE) // 0 is passed to open so that it doesn't use the onclose() proc

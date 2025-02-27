@@ -95,7 +95,7 @@
 					possible_candidates -= keyed_name
 			if(possible_candidates.len == 0)
 				return
-			var/desired_marking = input(user, "Choose a marking to change the current one to:", "Character Preference") as null|anything in possible_candidates
+			var/desired_marking = input(user, "Выберите маркинг на замену старому:", "Смена Маркинга") as null|anything in possible_candidates
 			if(desired_marking)
 				if(!body_markings[zone] || !body_markings[zone][changing_name])
 					return

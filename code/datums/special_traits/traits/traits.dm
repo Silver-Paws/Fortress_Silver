@@ -7,7 +7,7 @@
 // Positive Specials
 /datum/special_trait/tough
 	name = "Крепкий"
-	greet_text = span_notice("Отец всегда говорил - лучшая защита это нападение... Ну, пока это не мама, вбивающая ему мозги скалкой, оно так и есть. Мама всегда отлично учила меня.")
+	greet_text = span_notice("Отец всегда говорил - лучшая защита это нападение... Ну, пока дело не касается мамы, вбивающей ему ум-разум скалкой, оно так и есть. Мама всегда отлично учила меня.")
 	weight = 80
 
 /datum/special_trait/tough/on_apply(mob/living/carbon/human/character, silent)
@@ -26,7 +26,7 @@
 
 /datum/special_trait/aboriginal
 	name = "Корни Аборигена"
-	greet_text = span_notice("Мои далёкие предки боролись с бедами Энигмы задолго до колонизации острова, то что нет нужды есть или дышать – самый охраняемый секрет моей семьи. Кто-то смеет называть это чёрной магией. Я же предпочту \"Приручением земель\"..")
+	greet_text = span_notice("Мои далёкие предки боролись с бедами Энигмы задолго до колонизации острова, и то что нет нужды есть или дышать – самый охраняемый секрет моей семьи. Кто-то смеет называть это чёрной магией. Я же предпочту \"Приручением земель\"..")
 	restricted_jobs = list(INQUISITION_ROLES)
 	weight = 80
 
@@ -48,7 +48,7 @@
 
 /datum/special_trait/scrooge
 	name = "Скряга"
-	greet_text = span_notice("Маммоны правят Энигмой и <b>Я</b> тот счастливчик, который ведает <b>реальную</b> работу денег. Я всегда храню свои маммоны в безопаснейшем месте.")
+	greet_text = span_notice("Маммоны правят Энигмой и <b>Я</b> тот счастливчик, который ведает, как деньги <b>реально</b> работают. Я всегда храню свои маммоны в безопаснейшем месте.")
 	weight = 80
 
 /datum/special_trait/scrooge/on_apply(mob/living/carbon/human/character, silent)
@@ -129,7 +129,7 @@
 			to_chat(character, span_notice("Зизо побери... Я в самом деле опозорю свой род, если потеряю его. Минуту... Точно! Дерево!"))
 		if(75 to 85)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/greatsword/zwei
-			to_chat(character, span_notice("Ну не может быть что я потерял ХЕРОВ ц	вайхендер! Я должен проверить то дерево, на котором спал."))
+			to_chat(character, span_notice("Ну не может быть что я потерял ХЕРОВ цвайхендер! Я должен проверить то дерево, на котором спал."))
 		if(86 to 93)
 			character.mind.special_items["my sword"] = /obj/item/rogueweapon/estoc
 			to_chat(character, span_notice("Ну... Пробиваться сквозь латы может оказаться трудным без того эстока... Где же я его оставил..."))
@@ -334,7 +334,7 @@
 
 /datum/special_trait/noble
 	name = "Знатная Родословная"
-	greet_text = span_notice("Я или родился знатным, или мне её даровали.")
+	greet_text = span_notice("Я или родился знатным, или мне даровали знатность.")
 	restricted_traits = list(TRAIT_NOBLE)
 	weight = 100
 
@@ -366,7 +366,7 @@
 
 /datum/special_trait/lucky
 	name = "Счастливчик"
-	greet_text = span_notice("Я ощущаю себя самым удачливым на свете! Беды меркнут, как я прохожу мимо них от дня к дню на рутинной основе!")
+	greet_text = span_notice("Я ощущаю себя самым удачливым на свете! Беды меркнут и я прохожу мимо них от дня к дню на рутинной основе!")
 	weight = 10
 
 /datum/special_trait/lucky/on_apply(mob/living/carbon/human/character, silent)
@@ -405,7 +405,7 @@
 
 /datum/special_trait/graggar_champion
 	name = "Граггаров Славный Малый"
-	greet_text = span_notice("Посвящённая Граггару жизнь научила меня слёгкостью прокусывать и плоть, и кости.")
+	greet_text = span_notice("Посвящённая Граггару жизнь научила меня с лёгкостью прокусывать и плоть, и кости.")
 	req_text = "Верить в Граггара"
 	allowed_patrons = list(/datum/patron/inhumen/graggar)
 	weight = 40
@@ -512,7 +512,7 @@
 			reason = "ограбление дворянина"
 	add_bounty(character.real_name, amount, FALSE, reason, employer)
 	if(!silent)
-		to_chat(character, span_notice("Делал я это или нет, я обвинён в том, что совершил [reason] and the [employer] put a bounty on my head!"))
+		to_chat(character, span_notice("Делал я это или нет, я обвинён в том, что совершил [reason] и [employer] заплатит за мою голову дорого!"))
 
 
 /datum/special_trait/outlaw
@@ -597,7 +597,7 @@
 
 /datum/special_trait/annoying
 	name = "Надоедливый"
-	greet_text = span_boldwarning("Люди, кажется, меня просто не любит... Мне хочется плакать...")
+	greet_text = span_boldwarning("Люди, кажется, меня просто не любят... Мне хочется плакать...")
 	weight = 80
 
 /datum/special_trait/annoying/on_apply(mob/living/carbon/human/character, silent)

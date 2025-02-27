@@ -260,7 +260,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	var/used_title
 	switch(current_tab)
 		if (0) // Character Settings#
-			used_title = "Character Sheet"
+			used_title = "Лист персонажа"
 
 			// Top-level menu table
 			dat += "<table style='width: 100%; line-height: 20px;'>"
@@ -787,15 +787,15 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	var/HTML = "<center>"
 	if(SSjob.occupations.len <= 0)
 //		HTML += "The job SSticker is not yet finished creating jobs, please try again later"
-		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Done</a></center><br>" // Easier to press up here.
+		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Готово</a></center><br>" // Easier to press up here.
 
 	else
 //		HTML += "<b>Choose class preferences</b><br>"
 //		HTML += "<div align='center'>Left-click to raise a class preference, right-click to lower it.<br></div>"
-		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Done</a></center><br>" // Easier to press up here.
+		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Готово</a></center><br>" // Easier to press up here.
 		if(joblessrole != RETURNTOLOBBY && joblessrole != BERANDOMJOB) // this is to catch those that used the previous definition and reset.
 			joblessrole = RETURNTOLOBBY
-		HTML += "<b>If Role Unavailable:</b><font color='purple'><a href='?_src_=prefs;preference=job;task=nojob'>[joblessrole]</a></font><BR>"
+		HTML += "<b>Если роль недоступна:</b><font color='purple'><a href='?_src_=prefs;preference=job;task=nojob'>[joblessrole]</a></font><BR>"
 		HTML += "<script type='text/javascript'>function setJobPrefRedirect(level, rank) { window.location.href='?_src_=prefs;preference=job;task=setJobLevel;level=' + level + ';text=' + encodeURIComponent(rank); return false; }</script>"
 		HTML += "<table width='100%' cellpadding='1' cellspacing='0'><tr><td width='20%'>" // Table within a table for alignment, also allows you to easily add more colomns.
 		HTML += "<table width='100%' cellpadding='1' cellspacing='0'>"
@@ -900,7 +900,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 <div class="tutorialhover"><font>[used_name]</font>
 <span class="tutorial">[job.tutorial]<br>
-Slots: [job.spawn_positions]</span>
+Слотов: [job.spawn_positions]</span>
 </div>
 
 			"}
@@ -966,9 +966,9 @@ Slots: [job.spawn_positions]</span>
 			HTML += "<center><a href='?_src_=prefs;preference=job;task=triumphthing'>PLAY AS [user.client.prefs.lastclass] AGAIN</a></center>"
 		else
 			HTML += "<br>"
-		HTML += "<center><a href='?_src_=prefs;preference=job;task=reset'>Reset</a></center>"
+		HTML += "<center><a href='?_src_=prefs;preference=job;task=reset'>Сбросить</a></center>"
 
-	var/datum/browser/noclose/popup = new(user, "mob_occupation", "<div align='center'>Class Selection</div>", width, height)
+	var/datum/browser/noclose/popup = new(user, "mob_occupation", "<div align='center'>Выбор профессии или роли</div>", width, height)
 	popup.set_window_options("can_close=0")
 	popup.set_content(HTML)
 	popup.open(FALSE)
@@ -1064,7 +1064,7 @@ Slots: [job.spawn_positions]</span>
 
 	dat += "<style>label { display: inline-block; width: 200px; }</style><body>"
 
-	dat += "<center><a href='?_src_=prefs;preference=keybinds;task=close'>Done</a></center><br>"
+	dat += "<center><a href='?_src_=prefs;preference=keybinds;task=close'>Готово</a></center><br>"
 	for (var/category in kb_categories)
 		for (var/i in kb_categories[category])
 			var/datum/keybinding/kb = i
@@ -1085,10 +1085,10 @@ Slots: [job.spawn_positions]</span>
 				dat += "<br>"
 
 	dat += "<br><br>"
-	dat += "<a href ='?_src_=prefs;preference=keybinds;task=keybindings_reset'>\[Reset to default\]</a>"
+	dat += "<a href ='?_src_=prefs;preference=keybinds;task=keybindings_reset'>\[Сбросить раскладку\]</a>"
 	dat += "</body>"
 
-	var/datum/browser/noclose/popup = new(user, "keybind_setup", "<div align='center'>Keybinds</div>", 600, 600) //no reason not to reuse the occupation window, as it's cleaner that way
+	var/datum/browser/noclose/popup = new(user, "keybind_setup", "<div align='center'>Раскладка клавиш</div>", 600, 600) //no reason not to reuse the occupation window, as it's cleaner that way
 	popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
@@ -1318,17 +1318,12 @@ Slots: [job.spawn_positions]</span>
 				save_preferences()
 				SetKeybinds(user)
 
-			/*if("keybindings_reset")	
-				var/choice = tgalert(user, "Вы точно хотите сбросить раскладку клавиатуры?", "Сброс раскладки клавиш", "Однозначно", "Пожалуй, нет")
-				if(choice == "Пожалуй, нет")
-					ShowChoices(user,3)
-					return */
 			if("keybindings_reset")
-				var/choice = tgalert(user, "Do you really want to reset your keybindings?", "Setup keybindings", "Do It", "Cancel")
-				if(choice == "Cancel")
+				var/choice = tgalert(user, "Вы действительно хотите сбросить раскладку?", "Управление раскладкой", "Однозначно", "Нет")
+				if(choice == "Нет")
 					ShowChoices(user,3)
 					return
-				hotkeys = (choice == "Do it")
+				hotkeys = (choice == "Однозначно")
 				key_bindings = (hotkeys) ? deepCopyList(GLOB.hotkey_keybinding_list_by_key) : deepCopyList(GLOB.classic_keybinding_list_by_key)
 				user.client.update_movement_keys()
 				SetKeybinds(user)
@@ -1411,13 +1406,13 @@ Slots: [job.spawn_positions]</span>
 							ghost_others = GHOST_OTHERS_SIMPLE
 
 				if("name")
-					var/new_name = input(user, "Choose your character's name:", "Identity")  as text|null
+					var/new_name = input(user, "Выберите имя персонажа:", "Личность")  as text|null
 					if(new_name)
 						new_name = reject_bad_name(new_name)
 						if(new_name)
 							real_name = new_name
 						else
-							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+							to_chat(user, "<font color='red'>Неверное имя. Имя должно иметь минимум 2 и максимум [MAX_NAME_LEN] символа в длину. Оно может состоять только из букв латиницы A-Z, a-z; символов -, ' и .</font>")
 					GLOB.name_adjustments |= "[parent] changed their characters name to [new_name]."
 					log_character("[parent] changed their characters name to [new_name].")
 
@@ -1583,7 +1578,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Выберите расу", "Roguetown") as null|anything in crap
+					var/result = input(user, "Выберите расу", "Twilight Forest") as null|anything in crap
 
 					if(result)
 						set_new_race(result, user)
@@ -2036,7 +2031,7 @@ Slots: [job.spawn_positions]</span>
 								if(!name)
 									name = "Slot[i]"
 								choices[name] = i
-					var/choice = input(user, "CHOOSE A HERO","ROGUETOWN") as null|anything in choices
+					var/choice = input(user, "CHOOSE A HERO","TWILIGHT FOREST") as null|anything in choices
 					if(choice)
 						choice = choices[choice]
 						if(!load_character(choice))

@@ -65,14 +65,14 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 
 	var/time_remaining = SSticker.GetTimeLeft()
 	if(time_remaining > 0)
-		dat += "Time To Start: [round(time_remaining/10)]s<br>"
+		dat += "Начало через: [round(time_remaining/10)]s<br>"
 	else if(time_remaining == -10)
-		dat += "Time To Start: DELAYED<br>"
+		dat += "Начало через: ОТЛОЖЕНО<br>"
 	else
-		dat += "Time To Start: SOON<br>"
+		dat += "Начало через: СКОРО<br>"
 
-	dat += "Total players ready: [SSticker.totalPlayersReady]<br>"
-	dat += "<B>Classes:</B><br>"
+	dat += "Всего игроков готово: [SSticker.totalPlayersReady]<br>"
+	dat += "<B>Классы/Роли:</B><br>"
 
 	dat += "</center>"
 
@@ -113,7 +113,7 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 				dat += "<B>[job.title]</B> ([readiedas]) - [PL2.Join()]<br>"
 			else
 				dat += "<B>[job.title]</B> ([readiedas])<br>"
-	var/datum/browser/popup = new(src, "lobby_window", "<div align='center'>LOBBY</div>", 330, 430)
+	var/datum/browser/popup = new(src, "lobby_window", "<div align='center'>ЛОББИ</div>", 330, 430)
 	popup.set_window_options("can_close=0;can_minimize=0;can_maximize=0;can_resize=1;")
 	popup.set_content(dat.Join())
 	if(!client)

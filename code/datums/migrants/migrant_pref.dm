@@ -17,11 +17,11 @@
 	role_preferences.Cut()
 	if(!silent && prefs.parent)
 		if(new_state)
-			to_chat(prefs.parent, span_notice("You are now in the migrant queue, and will join the game with them when they arrive"))
+			to_chat(prefs.parent, span_notice("Вы теперь в очереди миграции и присоединитесь в раунд с ними как только они прибудут."))
 			if(prefs.defiant)
-				to_chat(src, span_userdanger("Remember : Defiant ERP protection is only enabled while COMBAT mode is active. AHELP if necessary."))
+				to_chat(src, span_userdanger("Помните: защита Defiant ERP работает только пока COMBAT mode активен. Используйте AHELP при надобности."))
 		else
-			to_chat(prefs.parent, span_boldwarning("You are no longer in the migrant queue"))
+			to_chat(prefs.parent, span_boldwarning("Вы более не в очереди на миграцию"))
 
 /datum/migrant_pref/proc/toggle_role_preference(role_type)
 	if(role_type in role_preferences)
@@ -33,9 +33,9 @@
 		if(SSmigrants.can_be_role(prefs.parent, role_type))
 			role_preferences += role_type
 			var/datum/migrant_role/role = MIGRANT_ROLE(role_type)
-			to_chat(prefs.parent, span_nicegreen("You have prioritizd the [role.name]. This does not guarantee getting the role"))
+			to_chat(prefs.parent, span_nicegreen("Вы выбрали приоритетной роль [role.name]. Это не гарантирует её пполучение"))
 		else
-			to_chat(prefs.parent, span_warning("You can't be this role. (Wrong species, gender or age; or banned)"))
+			to_chat(prefs.parent, span_warning("Вы не можете занять эту роль. (Возможно, неверные: раса, пол или возраст; или вам воспретили)"))
 
 /datum/migrant_pref/proc/post_spawn()
 	set_active(FALSE, TRUE)
@@ -54,10 +54,10 @@
 	var/list/dat = list()
 	var/current_migrants = SSmigrants.get_active_migrant_amount()
 	dat += "WAVE: \Roman[SSmigrants.wave_number]"
-	dat += "<center><b>BE A MIGRANT: <a href='?src=[REF(src)];task=toggle_active'>[active ? "YES" : "NO"]</a></b></center>"
-	dat += "<br><center>Wandering fools: [current_migrants ? "\Roman[current_migrants]" : "None"]</center>"
+	dat += "<center><b>БЫТЬ МИГРАНТОМ: <a href='?src=[REF(src)];task=toggle_active'>[active ? "ДА" : "НЕТ"]</a></b></center>"
+	dat += "<br><center>Странствующие глупцы: [current_migrants ? "\Roman[current_migrants]" : "ни одного"]</center>"
 	if(!SSmigrants.current_wave)
-		dat += "<br><center>The mist will clear out of the way in [(SSmigrants.time_until_next_wave / (1 SECONDS))] seconds...</center>"
+		dat += "<br><center>Туман рассеется через [(SSmigrants.time_until_next_wave / (1 SECONDS))]s...</center>"
 	else
 		var/datum/migrant_wave/wave = MIGRANT_WAVE(SSmigrants.current_wave)
 		dat += "<br><center><b>[wave.name]</b></center>"
@@ -73,9 +73,9 @@
 				stars_string = "(*\Roman[stars_amount])"
 			dat += "<center><a href='?src=[REF(src)];task=toggle_role_preference;role=[role_type]'>[role_name]</a> - \Roman[role_amount] [stars_string]</center>"
 
-		dat += "<br><center>They will arrive in [(SSmigrants.wave_timer / (1 SECONDS))] seconds...</center>"
+		dat += "<br><center>Они явятся через [(SSmigrants.wave_timer / (1 SECONDS))]s...</center>"
 
-	var/datum/browser/popup = new(client.mob, "migration", "<center>Find a purpose</center>", 330, 410)
+	var/datum/browser/popup = new(client.mob, "migration", "<center>Найди предназначение</center>", 330, 410)
 	//popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
